@@ -17,7 +17,7 @@ app.use(expressLayouts)
 
 
 app.get("/something", (req,res) => {
-  res.send("Hello there, I am Ahmad!")
+  res.send("Hello there, APHY!")
 })
 
 app.listen(PORT, () => {
