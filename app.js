@@ -17,7 +17,13 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(expressLayouts)
 
+app.get('/', (req, res) => {
+  res.render('pages/login')
+})
 
+app.get('/signup', (req, res) => {
+  res.render('pages/signup')
+})
 
 app.listen(PORT, () => {
   console.log(`server is listening on localhost${PORT}`)
