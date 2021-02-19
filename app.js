@@ -16,6 +16,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(expressLayouts)
 
 
+app.get("/something", (req,res) => {
+  res.send("Hello there, I am Ahmad!")
+})
+
 app.listen(PORT, () => {
   console.log(`server is listening on localhost${PORT}`)
 })
