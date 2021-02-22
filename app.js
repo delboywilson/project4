@@ -8,6 +8,7 @@ const crypto = require('crypto')
 const expressLayouts = require('express-ejs-layouts')
 const app = express()
 const PORT = 3000
+require('dotenv').config()
 
 app.set('view engine', 'ejs')
 app.use(morgan('dev'))
