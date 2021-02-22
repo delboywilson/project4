@@ -18,6 +18,5 @@ A creation of a reservation page for Mr. Coffee
 
 ## Contributors 
 
-- Ahmad 
 - Amelia
 - Derek 
