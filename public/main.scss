@@ -1,38 +1,143 @@
 * {
   margin: 0;
+  border: 0;
   box-sizing: border-box;
-  font-family: 'Archivo', sans-serif;
-  background-color: black
+  font-family: "Archivo", sans-serif;
+  background-color: black;
 }
-.main-wrapper {
-  display:flex;
-  flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-  align-items: center;
-}
-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 80px;
-  margin-bottom: 20px;
-  background-color: lightslategray;
-  font-weight: 500;
-  color: white;
-  text-shadow: 2px 2px gray;
-}
+
 footer {
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  width: 100vw;
-  height: 40px;
-  align-items: center;
-  justify-content: center;
-  background-color: lightslategray;
-  font-weight: 400;
-  color: white;
-  text-shadow: 2px 2px gray;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    color: white;
+    text-shadow: 2px 2px #7304ff;
 }
+
+//LAYOUT
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    background-color: white;
+}
+
+.header-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: white;
+    text-shadow: 2px 2px #7304ff;
+}
+
+//NAVIGATION BAR
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 0.025em;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none; 
+    flex-wrap: wrap;
+    padding: 0;
+
+}
+
+nav li {
+    display: flex;
+    min-width: 180px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-logout {
+    width: 219px;
+    height: 75px;
+    color:#7304FF;
+    background: #FFFFFF;
+    border: 2px solid #7304FF;
+    box-sizing: border-box;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 37px;
+}
+
+.white-coffee {
+    width: 60px;
+    height: 103.9px;
+    margin: 20px;
+}
+
+
+//LOGIN PAGE
+.rectangle-one {
+    width: 464px;
+    height: 85px;
+    margin: 10px 0px;
+    background: #ffffff;
+    border: 2px solid #7304ff;
+    box-sizing: border-box;
+    border-radius: 37px;
+}
+
+.btn-login {
+    width: 172px;
+    height: 71px;
+    margin: 10px 0;
+    background: #ffffff;
+    border: 2px solid #7304ff;
+    box-sizing: border-box;
+    border-radius: 37px;
+}
+
+.black-coffee {
+    width: 60px;
+    height: 103.9px;
+    margin: 20px; 
+}
+
+
+//SIGNUP PAGE
+.rectangle-two {
+    width: 389px;
+    height: 65px;
+    margin: 5px 0;
+    background: #ffffff;
+    border: 2px solid #7304ff;
+    box-sizing: border-box;
+    border-radius: 37px;
+}
+
+.btn-signup {
+    position: absolute;
+    width: 143px;
+    height: 54px;
+    margin: 5px;
+    background: #FFFFFF;
+    border: 2px solid #7304FF;
+    box-sizing: border-box;
+    border-radius: 37px;
+}
+
+//HOMEPAGE
+
+//SCHEDULE
