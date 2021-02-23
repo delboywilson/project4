@@ -10,7 +10,13 @@
     <title>Error | Mr. Coffee</title>
 </head>
 <body>
-     <h1>Sorry! Something is up, we will get back to you ASAP</h1>
-    <%=err.message%>
+    <div>
+        <%- include('partials/header')-%>
+        <div>
+            <h1>Sorry! Something is up, we will get back to you ASAP</h1>
+            <%=err.message%>
+        </div>
+        <%- include('partials/footer')-%>
+      </div>
 </body>
 </html>

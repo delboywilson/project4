@@ -40,7 +40,6 @@ footer {
   top: 50%;
   left: 50%;
   min-width: 30%;
-  height: 500px;
   background-color: white;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -142,7 +141,7 @@ nav li {
   text-align: center;
 }
 
-.btn-login {
+.btn {
   width: 100px;
   height: 50px;
   margin-bottom: 20px;
@@ -159,25 +158,45 @@ nav li {
 }
 
 .rectangle-two {
-  width: 389px;
-  height: 65px;
-  margin: 5px 0;
+  width: 300px;
+  height: 45px;
+  margin: 15px 0;
   background: #ffffff;
   border: 2px solid #7304ff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 37px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
 }
 
 .btn-signup {
-  position: absolute;
-  width: 143px;
-  height: 54px;
-  margin: 5px;
-  background: #FFFFFF;
-  border: 2px solid #7304FF;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 37px;
+  height: 40px;
+}
+
+.home-wrapper {
+  min-width: 50%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.round-image {
+  border-radius: 50%;
+  border: 2px solid #7304ff;
+}
+
+.user-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px;
 }
 /*# sourceMappingURL=main.css.map */
