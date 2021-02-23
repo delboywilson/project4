@@ -175,4 +175,28 @@ nav li {
 .btn-signup {
   height: 40px;
 }
+
+.home-wrapper {
+  min-width: 50%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.round-image {
+  border-radius: 50%;
+  border: 2px solid #7304ff;
+}
+
+.user-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px;
+}
 /*# sourceMappingURL=main.css.map */
