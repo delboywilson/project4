@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
     })
     .catch((err) => {
       console.error(err)
-      res.render('pages/error2', {
+      res.render('pages/error', {
         err: err
       })
     })
