@@ -1,11 +1,15 @@
-<%- include('layout_homepage') -%>
 
 <div>
-    <h2>Welcome</h2>
-    <img>
-    
+  <h2>Welcome</h2>
+  <img>  
 </div>
 
 <div>
-    <h2>Your Personal Schedule</h2>
+    <h2>All Schedules:</h2>
 </div>
+
+<ul class="user-schedules">
+  <% for(let i =0; i < mySchedule.length; i++) { %>
+    <li class="individual-users"><b>User name: </b><%= mySchedule[i].user_name %> <b>Day: </b><%= mySchedule[i].day %> <b>Start time: </b><%= mySchedule[i].start_time %> <b>End time: </b><%= mySchedule[i].end_time %></li>
+  <%} %>
+</ul>
