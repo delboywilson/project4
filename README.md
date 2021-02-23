@@ -10,8 +10,8 @@ A creation of a reservation page for Mr. Coffee
 
 ## Tasks 
 
-- [ ] Build database
-- [ ] Create login page
+- [x] Build database
+- [x] Create login page
 - [ ] Develop home page and user page
 - [ ] Develop schedule management page
 - [ ] Develop registration logic
