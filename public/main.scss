@@ -158,6 +158,12 @@ nav li {
     min-width: 50%;
     background-color: white;
     display: flex;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border: 2px solid #7304ff;
+    text-align: center;
 }
 
 .round-image{
@@ -171,5 +177,14 @@ nav li {
     margin: 10px;
 }
 
+table {
+    border: 2px solid #7304ff;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    border: 1px solid black;
+}
   
 //SCHEDULE

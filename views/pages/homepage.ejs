@@ -3,33 +3,33 @@
         <img src="static/assets/logo_blanc.png" class="white-coffee" alt="Coffee_logo">
 
         <ul>
-            <li><a style="color: white;" href="/schedulemanagement">Schedule</a></li>
+            <li><a style="color: white;" href="pages/schedulemanagement">Schedule</a></li>
             <li><button type="submit" class="btn-logout btn-hover"><a  style="color: black;" href="/login">LOG OUT</a></button></li>
         </ul>
     </nav>
 </header>
 <div>
-    <h2>All your lovely people<span>&#128520;</span></h2>
+    <h2 style="color:white; text-align:center; font-size: 30px;">All your lovely people<span> &#128520;</span></h2>
 
-    <div>
-        <table>
+    <div class="home-wrapper">
+        <table >
             <tr>
-                <th>Personal ID</th>
+                <th>ID</th>
                 <th>Name</th>
-                <th>Day</th>
-                <th>Start Time</th>
-                <th>End Time</th>
+                <th>Day </th>
+                <th>Start 🕑</th>
+                <th>End 🕑</th>
             </tr>
 
-            <!-- <% for(let i = 0; i < schedule.length; i++) { %>
+            <% for(let i = 0; i < schedules.length; i++) {%>
                 <tr>
-                  <td><%= schedule[i].user_id %></td>
-                  <td><%= schedule[i].username %></td>
-                  <td><%= schedule[i].day %></td>
-                  <td><%= schedule[i].start_time %></td>
-                  <td><%= schedule[i].end_time %></td>
+                  <td><%= schedules[i].id %></td>
+                  <td><%= schedules[i].id_user %></td>
+                  <td><%= schedules[i].day %></td>
+                  <td><%= schedules[i].start_time %></td>
+                  <td><%= schedules[i].end_time %></td>
                 </tr>
-            <% } %> -->
+            <%}%>
         </table>
     </div>
 </div>
