@@ -1,7 +1,17 @@
-<div>
-    <h2>All your lovely people's schedule <span>&#128520;</span></h2>
+<header>
+    <nav>
+        <img src="static/assets/logo_blanc.png" class="white-coffee" alt="Coffee_logo">
 
-    <div class="home-wrapper">
+        <u>
+            <li><a href="/schedulemanagement">Schedule</a></li>
+            <li><button type="submit" class="btn-logout"><a href="/login">LOG OUT</a></button></li>
+        </u>
+    </nav>
+</header>
+<div>
+    <h2>All your lovely people<span>&#128520;</span></h2>
+
+    <div>
         <table>
             <tr>
                 <th>Personal ID</th>
@@ -19,7 +29,7 @@
                   <td><%= schedule[i].start_time %></td>
                   <td><%= schedule[i].end_time %></td>
                 </tr>
-                <% } %>
+            <% } %>
         </table>
     </div>
 </div>

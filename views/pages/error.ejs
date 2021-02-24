@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/main.css"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com"> 
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&display=swap" rel="stylesheet">
-    <title>Error | Mr. Coffee</title>
+    <title>Error Error | Mr. Coffee</title>
 </head>
-<body>
-    <div>
-        <%- include('partials/header')-%>
-        <div>
-            <h1>Sorry! Something is up, we will get back to you ASAP</h1>
-            <%=err.message%>
-        </div>
-        <%- include('partials/footer')-%>
-      </div>
-</body>
-</html>
+
+<header class="header-layout">
+    <h1>Mr Coffee Schedule</h1>
+</header>
+
+<div class="main-wrapper">
+    <h1>Sorry!</h1> 
+    <h2>Something is up<span>&#9937;</span></h2>
+    <%=err.message%>
+</div>
