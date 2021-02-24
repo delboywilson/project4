@@ -1,8 +1,17 @@
-<h2>Welcome</h2>
+<header>
+    <nav>
+        <img src="static/assets/logo_blanc.png" class="white-coffee" alt="Coffee_logo">
 
+        <ul>
+            <li><a style="color: white;" href="/schedulemanagement">Schedule</a></li>
+            <li><button type="submit" class="btn-logout btn-hover"><a  style="color: black;" href="/login">LOG OUT</a></button></li>
+        </ul>
+    </nav>
+</header>
 <div>
-  <img href="#" class="round-image" alt="">
+    <h2>All your lovely people<span>&#128520;</span></h2>
 
+<<<<<<< HEAD
   <ul class="user-schedules">
     <% for(let i =0; i < mySchedule.length; i++) { %>
     <li class="individual-users"><b>User name: </b><%= mySchedule[i].user_name %> <b>Day: </b><%= mySchedule[i].day %> <b>Start time: </b><%= mySchedule[i].start_time %> <b>End time: </b><%= mySchedule[i].end_time %></li>
@@ -16,4 +25,27 @@
 <div class="home-wrapper">   
     
  
+=======
+    <div>
+        <table>
+            <tr>
+                <th>Personal ID</th>
+                <th>Name</th>
+                <th>Day</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+            </tr>
+
+            <!-- <% for(let i = 0; i < schedule.length; i++) { %>
+                <tr>
+                  <td><%= schedule[i].user_id %></td>
+                  <td><%= schedule[i].username %></td>
+                  <td><%= schedule[i].day %></td>
+                  <td><%= schedule[i].start_time %></td>
+                  <td><%= schedule[i].end_time %></td>
+                </tr>
+            <% } %> -->
+        </table>
+    </div>
+>>>>>>> aa73c8c97348f7ef929c7598236032625f1ad81c
 </div>

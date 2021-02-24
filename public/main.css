@@ -25,6 +25,16 @@ footer {
           justify-content: center;
 }
 
+.btn-hover:hover {
+  background-color: #7304FF;
+  border: 2px solid black;
+  color: white;
+}
+
+input {
+  outline: none;
+}
+
 .main-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -62,6 +72,7 @@ footer {
 }
 
 nav {
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,7 +84,6 @@ nav {
 nav a {
   text-decoration: none;
   display: block;
-  color: white;
   font-size: 16px;
   letter-spacing: 0.025em;
 }
@@ -83,41 +93,38 @@ nav ul {
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 180px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  min-width: 150px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .btn-logout {
-  width: 219px;
-  height: 75px;
-  color: #7304FF;
-  background: #FFFFFF;
+  width: 120px;
+  height: 50px;
+  color: black !important;
   border: 2px solid #7304FF;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 37px;
+  outline: none;
+  margin-right: 50px;
 }
 
 .white-coffee {
-  width: 60px;
-  height: 103.9px;
-  margin: 20px;
+  width: 40px;
+  margin: 30px 50px;
 }
 
 .form-control {
@@ -130,7 +137,6 @@ nav li {
   width: 300px;
   height: 60px;
   margin: 20px 0px;
-  background: #ffffff;
   border: 2px solid #7304ff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -145,11 +151,11 @@ nav li {
   width: 100px;
   height: 50px;
   margin-bottom: 20px;
-  background: #ffffff;
   border: 2px solid #7304ff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 37px;
+  outline: none;
 }
 
 .black-coffee {
@@ -161,7 +167,6 @@ nav li {
   width: 300px;
   height: 45px;
   margin: 15px 0;
-  background: #ffffff;
   border: 2px solid #7304ff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

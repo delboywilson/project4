@@ -20,7 +20,12 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
+<<<<<<< HEAD
     "express-session": "^1.17.1",
+=======
+    "express-validator": "^6.10.0",
+    "hover.css": "^2.3.2",
+>>>>>>> aa73c8c97348f7ef929c7598236032625f1ad81c
     "morgan": "^1.10.0",
     "pg": "^8.5.1",
     "pg-promise": "^10.9.2",

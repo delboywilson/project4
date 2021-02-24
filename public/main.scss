@@ -19,6 +19,16 @@ footer {
     position: absolute;
     justify-content: center;
 }
+
+.btn-hover:hover { 
+    background-color:#7304FF;
+    border: 2px solid black;
+    color: white;
+}
+
+input {
+    outline: none;
+}
   
 //LAYOUT
 .main-wrapper {
@@ -44,18 +54,19 @@ footer {
     color: white;
     position: absolute;
   }
+
   
 //NAVIGATION BAR
   
 nav {
-    display: flex;
+    width: 100vw;
+    display: flex; 
     justify-content: space-between;
 }
-  
+
 nav a {
     text-decoration: none;
     display: block;
-    color: white;
     font-size: 16px;
     letter-spacing: 0.025em;
 }
@@ -63,32 +74,32 @@ nav a {
 nav ul {
     display: flex;
     list-style-type: none; 
-    flex-wrap: wrap;
-    padding: 0;
+    align-items: center;
 }
   
 nav li {
     display: flex;
-    min-width: 180px;
     align-items: center;
-    justify-content: center;
+    min-width: 150px;
+    justify-content: space-around;
+
 }
   
 .btn-logout {
-    width: 219px;
-    height: 75px;
-    color:#7304FF;
-    background: #FFFFFF;
+    width: 120px;
+    height: 50px;
+    color:black !important;
     border: 2px solid #7304FF;
     box-sizing: border-box;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 37px;
+    outline: none;
+    margin-right: 50px;
 }
+
   
 .white-coffee {
-    width: 60px;
-    height: 103.9px;
-    margin: 20px;
+    width: 40px;
+    margin: 30px 50px; 
 }
   
   
@@ -102,7 +113,6 @@ nav li {
     width: 300px;
     height: 60px;
     margin: 20px 0px;
-    background: #ffffff;
     border: 2px solid #7304ff;
     box-sizing: border-box;
     border-radius: 37px;
@@ -114,10 +124,10 @@ nav li {
     width: 100px;
     height: 50px;
     margin-bottom: 20px;
-    background: #ffffff;
     border: 2px solid #7304ff;
     box-sizing: border-box;
     border-radius: 37px;
+    outline: none;
 }
   
 .black-coffee {
@@ -131,7 +141,6 @@ nav li {
     width: 300px;
     height: 45px;
     margin: 15px 0;
-    background: #ffffff;
     border: 2px solid #7304ff;
     box-sizing: border-box;
     border-radius: 37px;
