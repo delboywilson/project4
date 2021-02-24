@@ -18,9 +18,4 @@ router.post('/login', (req, res) => {
   res.redirect('/homepage')
 })
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> aa73c8c97348f7ef929c7598236032625f1ad81c
 module.exports = router

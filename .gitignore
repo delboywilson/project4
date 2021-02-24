@@ -118,9 +118,5 @@ dist
 #don
 .env
 
-<<<<<<< HEAD
-config.js
-=======
 #config
 config.js
->>>>>>> aa73c8c97348f7ef929c7598236032625f1ad81c
