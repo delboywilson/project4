@@ -159,6 +159,7 @@ nav li {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 37px;
+  outline: none;
 }
 
 .black-coffee {
