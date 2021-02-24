@@ -2,7 +2,7 @@
     <h1>Mr Coffee Schedule</h1>
 </header>
 <div >
-  <form method="POST" action="/login">
+  <form method="POST" action="/login" id="login-form">
     <div class="main-wrapper">
         <div>
             <img src="/static/assets/logo_dark.png" class="black-coffee" alt="coffee blacklogo">
@@ -10,8 +10,8 @@
         </div>
 
         <div>
-            <input name="email" type="email" id="InputEmail1" class="rectangle-one" placeholder="Email">
-            <input name="password" type="password" id="InputPassword1" class="rectangle-one" placeholder="Password">
+            <input name="email" type="email" id="InputEmail1" class="rectangle-one" placeholder="Email" required>
+            <input name="password" type="password" id="InputPassword1" class="rectangle-one" placeholder="Password" required>
         </div>
 
         <div>

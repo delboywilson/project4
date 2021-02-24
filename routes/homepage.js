@@ -7,19 +7,20 @@ const db = require('../db/database')
 // })
 
 router.get('/', (req, res) => {
-  // db.any('SELECT * from schedules;')
-  //   .then((schedule) => {
-  //     console.log(schedule)
+  db.any('SELECT * FROM schedules;')
+    .then((schedules) => {
+      //console.log(schedules)
       res.render('pages/homepage', {
-        // mySchedule: schedule
+        schedules: schedules
       })
     })
     .catch((err) => {
-      console.error(err)
+      //console.error(err)
       res.render('pages/error', {
-        err: err
+        err: err,
+        title: "Error | Mr. Coffee"
       })
-    
+    })
 })
 
 // router.post('/login', (req, res) => {
