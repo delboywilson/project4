@@ -17,7 +17,8 @@ router.get('/', (req, res) => {
     .catch((err) => {
       //console.error(err)
       res.render('pages/error', {
-        err: err
+        err: err,
+        title: "Error | Mr. Coffee"
       })
     })
 })
