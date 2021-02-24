@@ -1,7 +1,7 @@
 const pgp = require('pg-promise')()
 
-const connection = 'postgress://Delboy@localhost:5432/project4'
+const connectionDetails = require('/Users/Delboy/prac/incode2/project4/config.js') 
 
-const db = pgp(connection)
+const db = pgp(connectionDetails)
 
 module.exports = db

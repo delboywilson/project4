@@ -5,10 +5,8 @@ const morgan = require('morgan')
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const crypto = require('crypto')
-const bcrypt = require('bcrypt')
 const expressLayouts = require('express-ejs-layouts')
 const session = require('express-session')
-const User = require('./models/user')
 const app = express()
 const PORT = 3000
 // this was crashing nodemon as we need the module 

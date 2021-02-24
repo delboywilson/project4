@@ -11,7 +11,7 @@ DROP TABLE IF EXISTS schedules;
 
 CREATE TABLE IF NOT EXISTS schedules (
   id SERIAL PRIMARY KEY, 
-  id_user VARCHAR(50) NOT NULL, 
+  user_name VARCHAR(50) NOT NULL, 
   day NUMERIC(1) NOT NULL, 
   start_time TIMESTAMPTZ NOT NULL, 
   end_time TIMESTAMPTZ NOT NULL);

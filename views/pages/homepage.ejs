@@ -3,11 +3,11 @@
 <div>
   <img href="#" class="round-image" alt="">
 
-  <div class="user-control">
-    <p class="rectangle-one"><%= user.firstname %></p>
-    <p class="rectangle-one"><%= user.lastname %></p>
-    <p class="rectangle-one"><%= user.email %></p>
-  </div>
+  <ul class="user-schedules">
+    <% for(let i =0; i < mySchedule.length; i++) { %>
+    <li class="individual-users"><b>User name: </b><%= mySchedule[i].user_name %> <b>Day: </b><%= mySchedule[i].day %> <b>Start time: </b><%= mySchedule[i].start_time %> <b>End time: </b><%= mySchedule[i].end_time %></li>
+    <%} %>
+  </ul>
 
 <div>
  
@@ -15,9 +15,5 @@
 
 <div class="home-wrapper">   
     
-  <!-- <ul class="user-schedules">
-    <% for(let i =0; i < mySchedule.length; i++) { %>
-    <li class="individual-users"><b>User name: </b><%= mySchedule[i].user_name %> <b>Day: </b><%= mySchedule[i].day %> <b>Start time: </b><%= mySchedule[i].start_time %> <b>End time: </b><%= mySchedule[i].end_time %></li>
-    <%} %>
-  </ul> -->
+ 
 </div>
