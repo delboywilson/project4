@@ -25,6 +25,15 @@ footer {
           justify-content: center;
 }
 
+.btn-hover:hover {
+  background-color: #7304FF;
+  border: 2px solid black;
+}
+
+input {
+  outline: none;
+}
+
 .main-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;

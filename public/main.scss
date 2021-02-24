@@ -19,6 +19,15 @@ footer {
     position: absolute;
     justify-content: center;
 }
+
+.btn-hover:hover { 
+    background-color:#7304FF;
+    border: 2px solid black;
+}
+
+input {
+    outline: none;
+}
   
 //LAYOUT
 .main-wrapper {
