@@ -1,13 +1,16 @@
-<head>
-    <title>Error Error | Mr. Coffee</title>
-</head>
+<header>
+    <nav>
+        <img src="static/assets/logo_blanc.png" class="white-coffee" alt="Coffee_logo">
 
-<header class="header-layout">
-    <h1>Mr Coffee Schedule</h1>
+        <ul>
+            <li><a style="color: white;" href="/schedulemanagement">Schedule</a></li>
+            <li><button type="submit" class="btn-logout btn-hover"><a  style="color: black;" href="/login">LOG OUT</a></button></li>
+        </ul>
+    </nav>
 </header>
 
 <div class="main-wrapper">
     <h1>Sorry!</h1> 
-    <h2>Something is up<span>&#9937;</span></h2>
+    <h2>something is up<span>&#9937;</span></h2>
     <%=err.message%>
 </div>

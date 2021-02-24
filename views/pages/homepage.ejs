@@ -2,10 +2,10 @@
     <nav>
         <img src="static/assets/logo_blanc.png" class="white-coffee" alt="Coffee_logo">
 
-        <u>
-            <li><a href="/schedulemanagement">Schedule</a></li>
-            <li><button type="submit" class="btn-logout"><a href="/login">LOG OUT</a></button></li>
-        </u>
+        <ul>
+            <li><a style="color: white;" href="/schedulemanagement">Schedule</a></li>
+            <li><button type="submit" class="btn-logout btn-hover"><a  style="color: black;" href="/login">LOG OUT</a></button></li>
+        </ul>
     </nav>
 </header>
 <div>
@@ -21,7 +21,7 @@
                 <th>End Time</th>
             </tr>
 
-            <% for(let i = 0; i < schedule.length; i++) { %>
+            <!-- <% for(let i = 0; i < schedule.length; i++) { %>
                 <tr>
                   <td><%= schedule[i].user_id %></td>
                   <td><%= schedule[i].username %></td>
@@ -29,7 +29,7 @@
                   <td><%= schedule[i].start_time %></td>
                   <td><%= schedule[i].end_time %></td>
                 </tr>
-            <% } %>
+            <% } %> -->
         </table>
     </div>
 </div>

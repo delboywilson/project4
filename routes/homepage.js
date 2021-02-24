@@ -7,11 +7,11 @@ const db = require('../db/database')
 // })
 
 router.get('/', (req, res) => {
-  db.any('SELECT * from schedules;')
-    .then((schedule) => {
-      console.log(schedule)
+  // db.any('SELECT * from schedules;')
+  //   .then((schedule) => {
+  //     console.log(schedule)
       res.render('pages/homepage', {
-        mySchedule: schedule
+        // mySchedule: schedule
       })
     })
     .catch((err) => {
@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
       res.render('pages/error', {
         err: err
       })
-    })
+    
 })
 
 // router.post('/login', (req, res) => {
