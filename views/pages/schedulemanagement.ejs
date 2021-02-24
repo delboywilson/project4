@@ -8,7 +8,44 @@
         </ul>
     </nav>
 </header>
-<div>
-    
-</div>
+<section>
+    <form method="POST" action="*">
+        <div>
+            <div>
+                <img src="/static/assets/logo_dark.png" class="black-coffee" alt="coffee blacklogo">
+                <h2>Craft avaliability</h2>
+            </div>
+      
+            <div>
+                <!-- Need to put in drop down option  -->
+                <input name="email" type="email" id="InputEmail1" class="rectangle-one" placeholder="Email" required>
+                <input name="password" type="password" id="InputPassword1" class="rectangle-one" placeholder="Password" required>
+
+                <button type="submit" class="btn btn-hover">Login</button>
+            </div>
+        </div>
+    </form>
+</section>
+
+<section>
+    <h2>New schedule</h2>
+
+    <div>
+        <table>
+            <tr>
+                <th>Day </th>
+                <th>Start 🕑</th>
+                <th>End 🕑</th>
+            </tr>
+
+            <% for(let i =0; i < mySchedule.length; i++) { %>
+                <tb>
+                    <tr><%= mySchedule[i].day %></tr>
+                    <tr><%= mySchedule[i].start_time %></tr>
+                    <tr><%= mySchedule[i].end_time %></tr>
+                </tb>
+            <%}%>
+        </table>
+    </div>
+</section>
 
