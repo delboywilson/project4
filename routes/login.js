@@ -1,5 +1,7 @@
 const express = require('express')
 const router = express.Router()
+const crypto = require('crypto')
+const session = require('express-session')
 
 router.get('/', (req, res) => {
   res.render('pages/login')
@@ -15,42 +17,6 @@ router.post('/login', (req, res) => {
   db.schedules.push(newSchedule)
   res.redirect('/homepage')
 })
-
-
-// //VALIDATION FOR LOGIN
-// const form = document.getElementById("login-form");
-// const email = document.getElementById("InputEmail");
-// const password = document.getElementById("InputPassword");
-
-// form.addEventListener('submit', e => {
-// 	e.preventDefault();
-
-//     checkInputs();
-    
-//     console.log("here");    
-// });
-
-// function checkInputs(){
-//     const emailValue = email.value;
-//     const passwordValue = password.value;
-
-//     if (emailValue === "") {
-//         setErrorFor(email, "Email address cannot be blank");
-//     } else if (!isEmail(emailValue)) {
-//         setErrorFor(email, "Email is not a valid address");
-//     } else {
-//         setSuccessFor(email);
-//     }
-
-//     if (passwordValue === "") {
-//         setErrorFor(text, "Message cannot be blank");
-//     } else {
-//         return true;
-//     }
-
-//     alert("hello");
-// }
-
 
 
 module.exports = router
