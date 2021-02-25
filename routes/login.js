@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const crypto = require('crypto')
-var session = require('express-session')
+const session = require('express-session')
 
 router.get('/', (req, res) => {
   res.render('pages/login')

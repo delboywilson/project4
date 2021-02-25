@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
     .then((schedule) => {
       console.log(schedule)
       res.render('pages/homepage', {
-        mySchedule: schedule
+        schedule: schedule
       })
     })
     .catch((err) => {
