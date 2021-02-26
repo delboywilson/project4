@@ -9,7 +9,6 @@ router.get('/', (req, res) => {
       console.log(schedule)
       res.render('pages/homepage', {
         schedule: schedule
-
       })
     })
     .catch((err) => {

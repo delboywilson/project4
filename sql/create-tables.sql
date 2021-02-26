@@ -1,17 +1,42 @@
+-- DROP TABLE IF EXISTS users;
+
+-- CREATE TABLE IF NOT EXISTS users (
+--   id SERIAL PRIMARY KEY, 
+--   last_name VARCHAR(50) NOT NULL, 
+--   first_name VARCHAR(50) NOT NULL, 
+--   email VARCHAR(50) NOT NULL UNIQUE, 
+--   password VARCHAR(50) NOT NULL);
+
+-- DROP TABLE IF EXISTS schedules;
+
+-- CREATE TABLE IF NOT EXISTS schedules (
+--   id SERIAL PRIMARY KEY, 
+--   user_name VARCHAR(50) NOT NULL, 
+--   day NUMERIC(1) NOT NULL, 
+--   start_time TIMESTAMPTZ NOT NULL, 
+--   end_time TIMESTAMPTZ NOT NULL);
+
 DROP TABLE IF EXISTS users;
 
-CREATE TABLE IF NOT EXISTS users (
-  id SERIAL PRIMARY KEY, 
+ CREATE TABLE IF NOT EXISTS users (
+  user_id INT GENERATED ALWAYS AS IDENTITY,
   last_name VARCHAR(50) NOT NULL, 
   first_name VARCHAR(50) NOT NULL, 
   email VARCHAR(50) NOT NULL UNIQUE, 
-  password VARCHAR(50) NOT NULL);
+  password VARCHAR(100) NOT NULL, 
+  PRIMARY KEY (user_id)
+  );
 
 DROP TABLE IF EXISTS schedules;
 
-CREATE TABLE IF NOT EXISTS schedules (
-  id SERIAL PRIMARY KEY, 
-  user_name VARCHAR(50) NOT NULL, 
-  day NUMERIC(1) NOT NULL, 
-  start_time TIMESTAMPTZ NOT NULL, 
-  end_time TIMESTAMPTZ NOT NULL);
+  CREATE TABLE IF NOT EXISTS schedules (
+   schedule_id INT GENERATED ALWAYS AS IDENTITY,
+   ID_user INT,
+   day NUMERIC(1) NOT NULL, 
+   start_time TIMESTAMPTZ NOT NULL, 
+   end_time TIMESTAMPTZ NOT NULL,
+   PRIMARY KEY(schedule_id),
+   CONSTRAINT fk_ID
+      FOREIGN KEY(ID_user) 
+	    REFERENCES users (user_id)
+);

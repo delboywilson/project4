@@ -187,9 +187,6 @@ nav li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  position: fixed;
   top: 50%;
   left: 50%;
   border: 2px solid #7304ff;
