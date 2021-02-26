@@ -15,7 +15,7 @@
         <table >
             <tr>
                 <th>ID</th>
-                <th>Name</th>
+                <th>ID User</th>
                 <th>Day </th>
                 <th>Start 🕑</th>
                 <th>End 🕑</th>
@@ -24,8 +24,8 @@
 
             <% for(let i = 0; i < schedule.length; i++) { %>
                 <tr>
-                  <td><%= schedule[i].id %></td>
-                  <td><a href="/employeepage/<%= schedule[i].id %>"><%= schedule[i].user_name %></a></td>
+                  <td><%= schedule[i].schedule_id %></td>
+                  <td><a href="/employeepage/<%= schedule[i].schedule_id %>"><%= schedule[i].id_user %></a></td>
                   <td><%= schedule[i].day %></td>
                   <td><%= schedule[i].start_time %></td>
                   <td><%= schedule[i].end_time %></td>

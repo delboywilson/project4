@@ -43,7 +43,7 @@ let v2 = req.body.first_name
 let v3 = req.body.email
 let v4 = bcrypt.hashSync(req.body.password, 10)
 
-// TODO need to check first if user exists and don't add if they do
+// TODO need to check first if email exists and don't add if they do
 
 db.none('INSERT INTO users(last_name, first_name, email, password) VALUES ($1, $2, $3, $4);', [v1, v2, v3, v4])
  .then(() => {
