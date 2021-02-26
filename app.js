@@ -16,6 +16,9 @@ const indexRouter = require('./routes/index')
 const loginRouter = require('./routes/login')
 const signupRouter = require('./routes/signup')
 const homepageRouter = require('./routes/homepage')
+const errorRouter = require('./routes/homepage')
+const employeepageRouter = require('./routes/employeepage')
+const schedulemanagementRouter = require('./routes/schedulemanagement')
 
 app.set('view engine', 'ejs')
 
@@ -30,6 +33,9 @@ app.use('/', indexRouter)
 app.use('/login', loginRouter)
 app.use('/signup', signupRouter)
 app.use('/homepage', homepageRouter)
+app.use('/error', errorRouter)
+app.use('/employeepage', employeepageRouter)
+app.use('/schedulemanagement', schedulemanagementRouter)
 
 
 app.listen(PORT, () => {
