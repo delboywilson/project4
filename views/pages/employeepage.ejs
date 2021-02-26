@@ -8,42 +8,40 @@
       </u>
   </nav>
 </header>
-<section>
-    <img href="#" class="round-image" alt="" />
-  
-    <div class="user-control">
-        <p class="rectangle-one"><%= users.firstname %></p>
-        <p class="rectangle-one"><%= users.lastname %></p>
-        <p class="rectangle-one"><%= users.email %></p>
-    </div>
-  
-    <div>
-        <h2>Your personal schedule</h2>
-  
-        <div>
-            <table>
-                <tr>
-                    <th>Day </th>
-                    <th>Start 🕑</th>
-                    <th>End 🕑</th>
-                </tr>
+<section >
+    <h2 style="color:white; text-align:center;">Profile Details</h2>
 
+    <div class="main-wrapper">
+        <img src="static/assets/Profile_pic.jpg" class="round-image" alt=" my profile pic" /> 
+
+        <p class="rectangle-one"><%= user.first_name %></p>
+        <p class="rectangle-one"><%= user.last_name %></p>
+        <p class="rectangle-one"><%= user.email %></p>
+    </div>
+</section>
+
+<section>
+    <h2 style="color:white; text-align:center;">Your personal schedule</h2>
+  
+    <div class="home-wrapper">
+        <table>
+            <tr>
+                <th>Day </th>
+                <th>Start 🕑</th>
+                <th>End 🕑</th>
+            </tr>
+
+
+                <% /* %>
                 <% for(let i =0; i < mySchedule.length; i++) { %>
                     <tb>
                         <tr><%= mySchedule[i].day %></tr>
                         <tr><%= mySchedule[i].start_time %></tr>
-                        <tr><%= mySchedule[i].end_time %></tr>
+                        <tr><%= mySchedule[i].end_time %></tr> -->
                     </tb>
-                <%}%>
-            </table>
-      </div>
+                <%}%> 
+                <% */ %>
+        </table>
     </div>
 </section>
   
-
-
-<!-- <ul class="user-schedules">
-<% for(let i =0; i < mySchedule.length; i++) { %>
-<li class="individual-users"><b>User name: </b><%= mySchedule[i].user_name %> <b>Day: </b><%= mySchedule[i].day %> <b>Start time: </b><%= mySchedule[i].start_time %> <b>End time: </b><%= mySchedule[i].end_time %></li>
-<%} %>
-</ul> -->

@@ -19,5 +19,6 @@ router.get('/', (req, res) => {
         title: "Error | Mr. Coffee"
       })
     })
+  })
 
 module.exports = router

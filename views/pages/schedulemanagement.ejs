@@ -9,42 +9,60 @@
     </nav>
 </header>
 <section>
-    <form method="POST" action="*">
-        <div>
+    <form method="POST" action="/schedulemanagement">
+        <div class="main-wrapper">
             <div>
                 <img src="/static/assets/logo_dark.png" class="black-coffee" alt="coffee blacklogo">
                 <h2>Craft avaliability</h2>
             </div>
       
             <div>
-                <!-- Need to put in drop down option  -->
-                <input name="email" type="email" id="InputEmail1" class="rectangle-one" placeholder="Email" required>
-                <input name="password" type="password" id="InputPassword1" class="rectangle-one" placeholder="Password" required>
+                <input name="user_name" type="text" id="InputUserName" class="rectangle-one" placeholder="Write your Name" required>
 
-                <button type="submit" class="btn btn-hover">Login</button>
+                <select class="rectangle-one" type="number" name="day" value=''>
+                    <option value="" disabled selected hidden>Pick your day</option>
+                    <option type="number" value="1">Monday</option>
+                    <option type="number" value="2">Tuesday</option>
+                    <option type="number" value="3">Wednesday</option>
+                    <option type="number" value="4">Thursday</option>
+                    <option type="number" value="5">Friday</option>
+                    <option type="number" value="6">Saturday</option>
+                    <option type="number" value="7">Sunday</option>
+            
+                <input name="start_time" type="datetime-local" id="InputStarttime" class="rectangle-one" placeholder="Write your start time" required>
+                <input name="end_time" type="datetime-local" id="InputEndtime" class="rectangle-one" placeholder="Write your end time" required>
+                
+                <button type="submit" class="btn btn-hover">Submit</button>
             </div>
         </div>
     </form>
 </section>
 
 <section>
-    <h2>New schedule</h2>
+    <h2 style="color:white; text-align:center; font-size: 30px;">Updated schedule</h2>
 
-    <div>
+    <div class="home-wrapper">
         <table>
             <tr>
+                <th>Name</th>
                 <th>Day </th>
                 <th>Start 🕑</th>
                 <th>End 🕑</th>
             </tr>
 
-            <% for(let i =0; i < mySchedule.length; i++) { %>
+
+
+            
+            <% for(let i =0; i < schedule.length; i++) { %>
                 <tb>
-                    <tr><%= mySchedule[i].day %></tr>
-                    <tr><%= mySchedule[i].start_time %></tr>
-                    <tr><%= mySchedule[i].end_time %></tr>
+                    <tr><%= schedule.user_name %></tr>
+                    <tr><%= schedule[i].day %></tr>
+                    <tr><%= schedule[i].start_time %></tr>
+                    <tr><%= schedule[i].end_time %></tr>
                 </tb>
-            <%}%>
+            <% } %> 
+           
+           
         </table>
     </div>
 </section>
