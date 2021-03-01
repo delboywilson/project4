@@ -2,9 +2,30 @@ const express = require('express')
 const router = express.Router()
 const db = require('../db/database')
 const bcrypt = require('bcrypt')
-const session = require('express-session')
 
+// router.use((req, res, next) => {
+//   if (req.cookies.user_sid && !req.session.user) {
+//     res.clearCookie('user_sid')
+//   }
+//   next()
+// })
+
+const redirectHomepage = (req, res, next) => {
+  if (!req.session.userID) {
+    res.redirect('/homepage')
+  } else {
+    next()
+  }
+}
+
+
+// TODO put redirectHomepage back in
 router.get('/', (req, res) => {
+  console.log(req.session)
+
+  const { userID } = req.session
+
+  // req.session.userID = 
   res.render('pages/login')
 })
 
@@ -31,6 +52,8 @@ router.post('/', (req, res) => {
           res.render('pages/login')
         }
         else {
+          req.session.userID = match.user_id
+          console.log(req.session.userID)
           res.redirect('/homepage')
         }
       })

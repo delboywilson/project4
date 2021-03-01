@@ -2,12 +2,21 @@ const express = require('express')
 const router = express.Router()
 const db = require('../db/database')
 
+const redirectLogin = (req, res, next) => {
+  if (!req.session.userID) {
+    res.redirect('/login')
+  } else {
+    next()
+  }
+}
+
 // router.get('/schedulemanagement', (req, res) => {
 //   res.render('pages/schedulemanagement/:schedule_id')
 // })
 
-router.get('/:schedule_id', (req, res) => {
-  db.any('SELECT * FROM schedules WHERE schedule_id = $1', [req.params.schedule_id])
+// TODO put redirectLogin back in
+router.get('/', (req, res) => {
+  db.any(`SELECT user_id, last_name, first_name, id_user, day, start_time, end_time FROM users INNER JOIN schedules ON user_id = id_user WHERE user_id = ${req.session.userID};`)
     .then((schedule) => {
       console.log(schedule)
       res.render('pages/schedulemanagement', {
@@ -15,7 +24,7 @@ router.get('/:schedule_id', (req, res) => {
       })
     })
     .catch((err) => {
-      //console.error(err)
+      console.error(err)
       res.render('pages/error', {
         err: err,
         title: "Error | Mr. Coffee"
@@ -23,9 +32,9 @@ router.get('/:schedule_id', (req, res) => {
     })
   })
 
-router.get('/', (req, res) => {
+// router.get('/', (req, res) => {
 
-})
+// })
 
 // TODO POST route 
 
