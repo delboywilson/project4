@@ -8,29 +8,30 @@
       </u>
   </nav>
 </header>
-<section >
-    <h2 style="color:white; text-align:center;">Profile Details</h2>
-
-    <div class="main-wrapper">
-        <img src="static/assets/Profile_pic.jpg" class="round-image" alt=" my profile pic" /> 
-
-        <p class="rectangle-one"><%= user.first_name %></p>
-        <p class="rectangle-one"><%= user.last_name %></p>
-        <p class="rectangle-one"><%= user.email %></p>
-    </div>
-</section>
-
 <section>
-    <h2 style="color:white; text-align:center;">Your personal schedule</h2>
+    <div>
+        <h2 style="color:white; text-align:center;">Profile Details</h2>
+
+        <div class="main-wrapper">
+            <img src="static/assets/Profile_pic.jpg" class="round-image" alt=" my profile pic" /> 
+
+            <p class="rectangle-one"><%= user.first_name %></p>
+            <p class="rectangle-one"><%= user.last_name %></p>
+            <p class="rectangle-one"><%= user.email %></p>
+        </div>
+    </div>
+
+    <div>
+        <h2 style="color:white; text-align:center;">Your personal schedule</h2>
   
-    <div class="home-wrapper">
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Day </th>
-                <th>Start 🕑</th>
-                <th>End 🕑</th>
-            </tr>
+        <div class="home-wrapper">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Day </th>
+                    <th>Start 🕑</th>
+                    <th>End 🕑</th>
+                </tr>
 
 
                 <% /* %>
@@ -42,7 +43,8 @@
                     </tb>
                 <%}%> 
                 <% */ %>
-        </table>
+            </table>
+        </div>
     </div>
 </section>
   
