@@ -10,6 +10,9 @@ const redirectLogin = (req, res, next) => {
   }
 }
 // TODO put redirectLogin back in
+
+// this will show the details only for the logged in user, regardless of which name they click, which is ok, as they shouldn't 
+// access another user's page, but can be solved better
 router.get('/:user_id', (req, res) => {
   db.any(`SELECT user_id, last_name, first_name, email, id_user, day, start_time, end_time FROM users INNER JOIN schedules ON user_id = id_user WHERE user_id = ${req.session.userID};`)
   .then((user) => {
