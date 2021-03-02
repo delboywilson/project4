@@ -25,7 +25,6 @@ router.get('/', (req, res) => {
 
   const { userID } = req.session
 
-  // req.session.userID = 
   res.render('pages/login')
 })
 
@@ -38,9 +37,9 @@ router.post('/', (req, res) => {
       password: password,
     }
     console.log(login)
+    
     // query db for email & password
-    // compare login with stored data using?:
-
+    // compare login with stored data
     db.query('SELECT * FROM users WHERE email = $1;', [email]) 
     .then((results) => {
       const match = results[0]

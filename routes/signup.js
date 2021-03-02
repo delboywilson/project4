@@ -29,10 +29,15 @@ const redirectHomepage = (req, res, next) => {
 }
 // TODO add redirectHomepage back
 router.get('/', (req, res) => {
+
+  const { userID } = req.session
+
   res.render('pages/signup')
 })
 
 router.post('/', (req, res) => {
+
+const { userID } = req.session
 
 // TODO client side verification here
 
@@ -56,3 +61,14 @@ db.none('INSERT INTO users(last_name, first_name, email, password) VALUES ($1, $
  })
 
 module.exports = router
+
+
+// req.session.userID = 
+// new user_id that was just created
+
+// db.query('SELECT * FROM users WHERE email = $1;', [v3]) 
+//   .then((results) => {
+//     const newID = results[0]
+//     console.log(newID.user_id)
+//     req.session.userID = newID.user_id
+//   })
