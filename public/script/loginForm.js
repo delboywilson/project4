@@ -6,7 +6,7 @@ const passwordOne = document.getElementById("inputPassword");
 loginForm.addEventListener("submit", e => {
 
     if(!checkLoginInput())
-        e.preventDefault();
+        +e.preventDefault();
     
 });
 
