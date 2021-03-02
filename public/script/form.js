@@ -51,7 +51,7 @@ function checkInputs() {
     } else if (passwordValue != confirmPasswordValue){
         setErrorFor(confirmPasswordInput, "Password does not match");
     } else {
-        setSucessFor(confirmPasswordInput, "Password is a match");
+        setSuccessFor(confirmPasswordInput, "Password is a match");
     }
     return true;
 }
