@@ -2,18 +2,8 @@ const express = require('express')
 const path = require('path')
 const db = require('../db/database')
 const router = express.Router()
-const session = require('express-session')
 const bcrypt = require('bcrypt')
 
-router.use(session({
-  key: 'user_sid',
-  secret: 'secretstuff',
-  resave: false,
-  saveUninitialized: false,
-  cookie: {
-    expires: 600000
-  }
-}))
 
 router.use((req, res, next) => {
   if (req.cookies.user_sid && !req.session.user) {
@@ -22,19 +12,27 @@ router.use((req, res, next) => {
   next()
 })
 
-let sessionChecker = (req, res, next) => {
-  if (req.session.user && req.cookies.user_sid) {
-    res.redirect('pages/homepage')
+// let sessionChecker = (req, res, next) => {
+//   if (req.session.user && req.cookies.user_sid) {
+//     res.redirect('pages/homepage')
+//   } else {
+//     next()
+//   }
+// }
+
+const redirectHomepage = (req, res, next) => {
+  if (!req.session.userID) {
+    res.redirect('/homepage')
   } else {
     next()
   }
 }
-
-router.get('/', sessionChecker, (req, res) => {
+// TODO add redirectHomepage back
+router.get('/', (req, res) => {
   res.render('pages/signup')
 })
 
-router.post('/', sessionChecker, (req, res) => {
+router.post('/', (req, res) => {
 
 // TODO client side verification here
 

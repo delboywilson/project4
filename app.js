@@ -19,6 +19,7 @@ const homepageRouter = require('./routes/homepage')
 const errorRouter = require('./routes/homepage')
 const employeepageRouter = require('./routes/employeepage')
 const schedulemanagementRouter = require('./routes/schedulemanagement')
+const logoutRouter = require('./routes/logout')
 
 app.set('view engine', 'ejs')
 
@@ -26,8 +27,18 @@ app.use(morgan('dev'))
 app.use('/static', express.static(path.join(__dirname, 'public')))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
-app.use(cookieParser())
+// app.use(cookieParser())
 app.use(expressLayouts)
+app.use(session({
+  key: 'user_sid',
+  secret: 'secretstuff',
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    expires: 3600000,
+    sameSite: true
+  }
+}))
 
 app.use('/', indexRouter)
 app.use('/login', loginRouter)
@@ -36,6 +47,7 @@ app.use('/homepage', homepageRouter)
 app.use('/error', errorRouter)
 app.use('/employeepage', employeepageRouter)
 app.use('/schedulemanagement', schedulemanagementRouter)
+app.use('/logout', logoutRouter)
 
 
 app.listen(PORT, () => {

@@ -2,6 +2,14 @@ const express = require('express')
 const router = express.Router()
 const db = require('../db/database')
 
+const redirectLogin = (req, res, next) => {
+  if (!req.session.userID) {
+    res.redirect('/login')
+  } else {
+    next()
+  }
+}
+// TODO put redirectHomepage back in
 router.get('/', (req, res) => {
 
   db.any('SELECT * from schedules;')
