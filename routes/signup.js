@@ -5,12 +5,12 @@ const router = express.Router()
 const bcrypt = require('bcrypt')
 
 
-router.use((req, res, next) => {
-  if (req.cookies.user_sid && !req.session.user) {
-    res.clearCookie('user_sid')
-  }
-  next()
-})
+// router.use((req, res, next) => {
+//   if (req.cookies.user_sid && !req.session.user) {
+//     res.clearCookie('user_sid')
+//   }
+//   next()
+// })
 
 // let sessionChecker = (req, res, next) => {
 //   if (req.session.user && req.cookies.user_sid) {
