@@ -1,41 +1,40 @@
 <header>
-  <nav>
-      <img src="static/assets/logo_blanc.png" class="white-coffee" alt="Coffee_logo">
+    <nav>
+        <img src="static/assets/logo_blanc.png" class="white-coffee" alt="Coffee_logo">
 
-      <u>
-          <li><a href="/schedulemanagement">Schedule</a></li>
-        <form method='post' action='/logout'>
-          <li><button type="submit" class="btn-logout"><a>LOG OUT</a></button></li>
-        </form>
-      </u>
-  </nav>
+
+        <ul>
+            <li><a style="color: white;" href="/schedulemanagement">Schedule</a></li>
+            <form method='post' action='/logout'>
+            <li><button type="submit" class="btn-logout btn-hover"><a  style="color: black;" >LOG OUT</a></button></li>
+            </form>
+        </ul>
+    </nav>
+
 </header>
-<section>
-    <div>
-        <h2 style="color:white; text-align:center;">Profile Details</h2>
 
-        <div class="main-wrapper">
-            <img src="static/assets/Profile_pic.jpg" class="round-image" alt=" my profile pic" /> 
+<div class="whole-wrapper2">
+    <h1 style="color:white; text-align:center; margin-bottom: 20px">Profile Details</h2>
 
-            <p class="rectangle-one"><%= user.first_name %></p>
-            <p class="rectangle-one"><%= user.last_name %></p>
-            <p class="rectangle-one"><%= user.email %></p>
-        </div>
+    <div class="main-wrapper">
+        <div  class="round-image"></div> 
+
+        <p class="rectangle-two"><%= user.first_name %></p>
+        <p class="rectangle-two"><%= user.last_name %></p>
+        <p class="rectangle-two"><%= user.email %></p>
     </div>
+</div>
 
-    <div>
+<section class="whole-wrapper2">
         <h2 style="color:white; text-align:center;">Your personal schedule</h2>
   
         <div class="home-wrapper">
             <table>
                 <tr>
-                    <th>Name</th>
-                    <th>Day </th>
+                    <th>Days</th>
                     <th>Start 🕑</th>
                     <th>End 🕑</th>
                 </tr>
-
-
                 <% /* %>
                 <% for(let i =0; i < mySchedule.length; i++) { %>
                     <tb>
