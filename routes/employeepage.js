@@ -11,7 +11,7 @@ const redirectLogin = (req, res, next) => {
 }
 // TODO put redirectLogin back in
 router.get('/:user_id', (req, res) => {
-  db.query('SELECT * FROM users WHERE user_id = $1', [req.params.user_id])
+  db.any(`SELECT user_id, last_name, first_name, email, id_user, day, start_time, end_time FROM users INNER JOIN schedules ON user_id = id_user WHERE user_id = ${req.session.userID};`)
   .then((user) => {
     console.log(user)
     res.render('pages/employeepage', { 

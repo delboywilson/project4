@@ -8,8 +8,7 @@ const crypto = require('crypto')
 const expressLayouts = require('express-ejs-layouts')
 const session = require('express-session')
 const app = express()
-const PORT = 3000
-// this was crashing nodemon as we need the module 
+const PORT = 3000 
 // require('dotenv').config()
 
 const indexRouter = require('./routes/index')
@@ -30,7 +29,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // app.use(cookieParser())
 app.use(expressLayouts)
 app.use(session({
+  // store: new (require('connect-pg-simple')(session))(),
   key: 'user_sid',
+  // TODO store secret in .env
   secret: 'secretstuff',
   resave: false,
   saveUninitialized: false,

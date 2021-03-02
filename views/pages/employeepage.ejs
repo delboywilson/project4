@@ -2,6 +2,7 @@
     <nav>
         <img src="static/assets/logo_blanc.png" class="white-coffee" alt="Coffee_logo">
 
+
         <ul>
             <li><a style="color: white;" href="/schedulemanagement">Schedule</a></li>
             <form method='post' action='/logout'>
@@ -9,6 +10,7 @@
             </form>
         </ul>
     </nav>
+
 </header>
 
 <div class="whole-wrapper2">
@@ -16,11 +18,11 @@
 
     <div class="main-wrapper">
         <div  class="round-image"></div> 
-
-        <p class="rectangle-two"><%= user.first_name %></p>
-        <p class="rectangle-two"><%= user.last_name %></p>
-        <p class="rectangle-two"><%= user.email %></p>
     
+        <p class="rectangle-two"><%= user[0].first_name %></p>
+        <p class="rectangle-two"><%= user[0].last_name %></p>
+        <p class="rectangle-two"><%= user[0].email %></p>
+        
     </div>
 </div>
 
@@ -30,19 +32,19 @@
         <div class="home-wrapper">
             <table>
                 <tr>
-                    <th>Days</th>
+                    <th>Days </th>
                     <th>Start 🕑</th>
                     <th>End 🕑</th>
                 </tr>
-                <% /* %>
-                <% for(let i =0; i < mySchedule.length; i++) { %>
-                    <tb>
-                        <tr><%= mySchedule[i].day %></tr>
-                        <tr><%= mySchedule[i].start_time %></tr>
-                        <tr><%= mySchedule[i].end_time %></tr> -->
-                    </tb>
+                
+                <% for(let i =0; i < user.length; i++) { %>
+                    <tr>
+                        <td><%= user[i].day %></td>
+                        <td><%= user[i].start_time %></td>
+                        <td><%= user[i].end_time %></td> -->
+                    </tr>
                 <%}%> 
-                <% */ %>
+                
             </table>
         </div>
     </div>
