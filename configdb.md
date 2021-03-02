@@ -7,3 +7,5 @@ const connectionDetails = require('/Users/Delboy/prac/incode2/project4/config.js
 
 Amelia:
 
+const connectionDetails = require('/Users/braedanbolt/desktop/dev/project4/config.js') 
+
