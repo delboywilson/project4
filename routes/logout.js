@@ -10,6 +10,7 @@ const redirectLogin = (req, res, next) => {
 }
 
 router.post('/', redirectLogin, (req, res) => {
+  res.clearCookie('user_sid')
   req.session.destroy()
   res.redirect('/login')
 })
