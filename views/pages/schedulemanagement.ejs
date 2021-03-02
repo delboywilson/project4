@@ -1,6 +1,6 @@
 <header>
     <nav>
-        <img src="static/assets/logo_blanc.png" class="white-coffee" alt="Coffee_logo">
+        <a href="/"><img src="static/assets/logo_blanc.png" class="white-coffee" alt="Coffee_logo"></a>
 
         <ul>
             <li><a style="color: white;" href="/schedulemanagement">Schedule</a></li>
@@ -47,8 +47,8 @@
     <div class="home-wrapper">
         <table>
             <tr>
-                <th>Name</th>
-                <th>ID</th>
+                <!-- <th>Name</th> -->
+                <!-- <th>ID</th> -->
                 <th>Day </th>
                 <th>Start 🕑</th>
                 <th>End 🕑</th>
@@ -56,8 +56,8 @@
             
             <% for(let i =0; i < schedule.length; i++ ){ %>
                 <tr>
-                    <td><%= schedule[i].first_name %> <%= schedule[i].last_name %></td>
-                    <td><%= schedule[i].id_user %></td>
+                    <!-- <td><%= schedule[i].id_user %></td> -->
+                    <!--<td><%= schedule[i].first_name %> <%= schedule[i].last_name %></td> -->
                     <td><%= schedule[i].day %></td>
                     <td><%= schedule[i].start_time %></td>
                     <td><%= schedule[i].end_time %></td>
