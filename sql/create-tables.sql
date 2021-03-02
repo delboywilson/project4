@@ -31,7 +31,7 @@ DROP TABLE IF EXISTS schedules;
 
   CREATE TABLE IF NOT EXISTS schedules (
    schedule_id INT GENERATED ALWAYS AS IDENTITY,
-   ID_user INT,
+   id_user INT,
    day NUMERIC(1) NOT NULL, 
    start_time TIMESTAMPTZ NOT NULL, 
    end_time TIMESTAMPTZ NOT NULL,
