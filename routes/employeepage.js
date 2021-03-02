@@ -13,6 +13,7 @@ const redirectLogin = (req, res, next) => {
 router.get('/:user_id', (req, res) => {
   db.query('SELECT * FROM users WHERE user_id = $1', [req.params.user_id])
   .then((user) => {
+    console.log(user)
     res.render('pages/employeepage', { 
       user: user 
     })

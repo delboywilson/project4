@@ -1,11 +1,13 @@
 //LOGIN VALIDATION
-const loginForm = document.getElementById ("login-Form");
+const loginForm = document.getElementById("login-form");
 const emailOne = document.getElementById("inputEmail");
 const passwordOne = document.getElementById("inputPassword");
 
 loginForm.addEventListener("submit", e => {
-    e.preventDefault();
-    checkLoginInput();
+
+    if(!checkLoginInput())
+        e.preventDefault();
+    
 });
 
 function checkLoginInput() {
@@ -13,7 +15,7 @@ function checkLoginInput() {
     const passwordValueOne = passwordOne.value;
 
     if (emailValueOne === "") {
-        setErrorFor(InputEmail, "Email address cannot be blank");
+        setErrorFor(inputEmail, "Email address cannot be blank");
     } else if (!isEmail1(emailValueOne)) {
         setErrorFor(inputEmail, "Email is not a valid address");
     } else {
@@ -21,7 +23,7 @@ function checkLoginInput() {
     }
 
     if (passwordValueOne === "") {
-        setErrorFor(inputpassword, "Password cannot be blank");
+        setErrorFor(inputPassword, "Password cannot be blank");
     } else {
         setSuccessFor(inputPassword);
     }
@@ -32,24 +34,20 @@ function checkLoginInput() {
 
 
 
-// TRIGGER 
+// // TRIGGER 
 
-function setErrorFor(input, message) {
-    const formControl = input.parentElement; // .form-control
-    const errorMessage = formControl.querySelector("small");
-    errorMessage.innerText = message;
-    formControl.className = "form-control error";    
-}
+// function setErrorFor(input, message) {
+//     const formControl = input.parentElement; // .form-control
+//     const errorMessage = formControl.querySelector("small");
+//     errorMessage.innerText = message;
+//     formControl.className = "form-control error";    
+// }
 
-function setSuccessFor(input) {
-	const formControl = input.parentElement;
-	formControl.className = "form-control success";
-}
+// function setSuccessFor(input) {
+// 	const formControl = input.parentElement;
+// 	formControl.className = "form-control success";
+// }
 
 
-//REG EXPRESSION//
+// //REG EXPRESSION//
 
-function isEmail1(inputEmail) {
-	const add = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	return add.test(inputEmail);
-}
