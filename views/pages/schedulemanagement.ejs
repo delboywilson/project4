@@ -10,7 +10,8 @@
         </ul>
     </nav>
 </header>
-<section>
+
+<div class="whole-wrapper1">
     <form method="POST" action="/schedulemanagement">
         <div class="main-wrapper">
             <div>
@@ -19,7 +20,7 @@
             </div>
       
             <div>
-                <input name=id_user type="integer" id="id_user" class="rectangle-one" placeholder="User Id Number:">
+                <input name=id_user type="integer" id="id_user" class="rectangle-one" placeholder="Your Id">
                 <select style="outline: none;" class="rectangle-one" type="number" name="day" value=''>
                     <option value="" disabled selected hidden>Pick your day</option>
                     <option type="number" value="1">Monday</option>
@@ -37,28 +38,29 @@
             </div>
         </div>
     </form>
-</section>
+</div>
+
 
 <section>
-    <h2 style="color:white; text-align:center; font-size: 30px;">Updated schedule</h2>
+    <h2 style="color:white; text-align:center; font-size: 30px;">Your schedule</h2>
 
     <div class="home-wrapper">
         <table>
             <tr>
-                <th>User ID</th>
-                <th>Name</th>
+                <th>ID</th>
                 <th>Day </th>
                 <th>Start 🕑</th>
                 <th>End 🕑</th>
             </tr>
-            <tr>
+            
             <% for(let i =0; i < schedule.length; i++ ){ %>
-                <td><%= schedule[i].id_user %></td>
-                <td><%= schedule[i].day %></tr>
-                <td><%= schedule[i].start_time %></tr>
-                <td><%= schedule[i].end_time %></tr>
-                <% } %>
-            </tr>
+                <tr>
+                    <td><%= schedule[i].id_user %></td>
+                    <td><%= schedule[i].day %></td>
+                    <td><%= schedule[i].start_time %></td>
+                    <td><%= schedule[i].end_time %></td>
+                </tr>
+            <% } %>
         </table>
     </div>
 </section>
