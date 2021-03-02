@@ -6,8 +6,12 @@ const password = document.getElementById("passwordInput");
 const confirmPassword = document.getElementById("confirmPasswordInput");
 
 form.addEventListener('submit', e => {
-    e.preventDefault();
-    checkInputs();
+    
+    if(!checkInputs())
+    {
+        e.preventDefault() 
+    }
+    
 });
 
 function checkInputs() {
@@ -49,9 +53,11 @@ function checkInputs() {
     if (confirmPasswordValue ==="") {
         setErrorFor(confirmPasswordInput, "Password cannot be blank");
     } else if (passwordValue != confirmPasswordValue){
+        console.log("this is", passwordValue)
+        console.log("this is confirm", confirmPasswordValue)
         setErrorFor(confirmPasswordInput, "Password does not match");
     } else {
-        setSucessFor(confirmPasswordInput, "Password is a match");
+        setSuccessFor(confirmPasswordInput, "Password is a match");
     }
     return true;
 }
@@ -90,32 +96,32 @@ function checkInputs() {
 
 
 
-// TRIGGER 
+// // TRIGGER 
 
-function setErrorFor(input, message) {
-    const formControl = input.parentElement; //form-control
-    const errorMessage = formControl.querySelector("small");
-    errorMessage.innerText = message;
-    formControl.className = "form-control error";    
-}
+// function setErrorFor(input, message) {
+//     const formControl = input.parentElement; //form-control
+//     const errorMessage = formControl.querySelector("small");
+//     errorMessage.innerText = message;
+//     formControl.className = "form-control error";    
+// }
 
-function setSuccessFor(input) {
-	const formControl = input.parentElement;
-	formControl.className = "form-control success";
-}
+// function setSuccessFor(input) {
+// 	const formControl = input.parentElement;
+// 	formControl.className = "form-control success";
+// }
 
 
-//REG EXPRESSION//
+// //REG EXPRESSION//
 
-function isEmail(emailInput) {
-	const add = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	return add.test(emailInput);
-}
+// function isEmail(emailInput) {
+// 	const add = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+// 	return add.test(emailInput);
+// }
 
-function isPassword(passwordInput) {
-    const re = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
-    return re.test(passwordInput);
-}
+// function isPassword(passwordInput) {
+//     const re = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+//     return re.test(passwordInput);
+// }
 
 // //PASSWORD VISIBILITY
 // const togglePassword = document.querySelector('#togglePassword');

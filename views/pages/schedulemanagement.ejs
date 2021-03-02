@@ -51,23 +51,14 @@
                 <th>Start 🕑</th>
                 <th>End 🕑</th>
             </tr>
-
-
-
-            
-            <% for(let i =0; i < schedule.length; i++) { %>
-                <tb>
-                    <tr>
-                        <td><%= schedule[i].id_user %></td>
-                     </tr>
-                    
-                    <tr><td><%= schedule[i].day %></td></tr>
-                    <tr><td><%= schedule[i].start_time %></td></tr>
-                    <tr><td><%= schedule[i].end_time %></td></tr>
-                </tb>
-            <% } %> 
-           
-           
+            <tr>
+            <% for(let i =0; i < schedule.length; i++ ){ %>
+                <td><%= schedule[i].id_user %></td>
+                <td><%= schedule[i].day %></tr>
+                <td><%= schedule[i].start_time %></tr>
+                <td><%= schedule[i].end_time %></tr>
+                <% } %>
+            </tr>
         </table>
     </div>
 </section>
