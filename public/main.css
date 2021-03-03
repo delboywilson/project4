@@ -247,6 +247,7 @@ section {
   border: 4px solid #7304ff;
   overflow: hidden;
   position: relative;
+  background-color: lightgrey;
 }
 
 .edit {
