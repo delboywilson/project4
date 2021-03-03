@@ -6,9 +6,6 @@
   "scripts": {
     "create-database": "createdb project4",
     "drop-database": "dropdb project4",
-    "create-tables": "psql Delboy -h localhost -d project4 -f sql/create-tables.sql",
-    "seed-tables": "psql Delboy -h localhost -d project4 -f sql/seed-tables.sql",
-    "create-store": "psql Delboy -h localhost -d project4 < node_modules/connect-pg-simple/table.sql",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon -e js,ejs,css app.js"
   },

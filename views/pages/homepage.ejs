@@ -1,40 +1,51 @@
 <header>
-    <nav>
-        <img src="static/assets/logo_blanc.png" class="white-coffee" alt="Coffee_logo">
+  <nav>
+    <img
+      src="static/assets/logo_blanc.png"
+      class="white-coffee"
+      alt="Coffee_logo"
+    />
 
-        <ul>
-            <li><a style="color: white;" href="/schedulemanagement">Schedule</a></li>
-            <form method='post' action='/logout'>
-            <li><button type="submit" class="btn-logout btn-hover"><a  style="color: black;">LOG OUT</a></button></li>
-            </form>
-        </ul>
-    </nav>
+    <ul>
+      <li><a style="color: white" href="/schedulemanagement">Schedule</a></li>
+      <form method="post" action="/logout">
+        <li>
+          <button type="submit" class="btn-logout btn-hover">
+            <a style="color: black">LOG OUT</a>
+          </button>
+        </li>
+      </form>
+    </ul>
+  </nav>
 </header>
 <section>
-    <h2 style="color:white; text-align:center; font-size: 30px;">All your lovely people<span> &#128520;</span></h2>
+  <h2 style="color: white; text-align: center; font-size: 30px">
+    All your lovely people<span> &#128520;</span>
+  </h2>
 
-    <div class="home-wrapper">
-        <table >
-            <tr>
-                <th>Name</th>
-                <th>User ID</th>
-                <th>Day </th>
-                <th>Start 🕑</th>
-                <th>End 🕑</th>
-            </tr>
+  <div class="home-wrapper">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>User ID</th>
+        <th>Day</th>
+        <th>Start 🕑</th>
+        <th>End 🕑</th>
+      </tr>
 
-
-            <% for(let i = 0; i < schedule.length; i++) { %>
-                <tr>
-                  <td><a href="/employeepage/<%= schedule[i].user_id %>"><%= schedule[i].first_name %> <%= schedule[i].last_name %></a></td>
-                  <td><%= schedule[i].id_user %></td>
-                  <td><%= schedule[i].day %></td>
-                  <td><%= schedule[i].start_time %></td>
-                  <td><%= schedule[i].end_time %></td>
-                </tr>
-            <% } %>
-
-        </table>
-    </div>
+      <% for(let i = 0; i < schedule.length; i++) { %>
+      <tr>
+        <td>
+          <a href="/employeepage/<%= schedule[i].user_id %>"
+            ><%= schedule[i].first_name %> <%= schedule[i].last_name %></a
+          >
+        </td>
+        <td><%= schedule[i].id_user %></td>
+        <td><%= schedule[i].day %></td>
+        <td><%= schedule[i].start_time %></td>
+        <td><%= schedule[i].end_time %></td>
+      </tr>
+      <% } %>
+    </table>
+  </div>
 </section>
-
