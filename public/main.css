@@ -44,6 +44,11 @@ input {
   position: absolute;
 }
 
+p {
+  width: 100%;
+  padding-top: 15px;
+}
+
 .whole-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
