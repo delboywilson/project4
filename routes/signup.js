@@ -3,31 +3,9 @@ const path = require("path");
 const db = require("../db/database");
 const router = express.Router();
 const bcrypt = require("bcrypt");
+const redirectHomepage = require("../middleware.js").redirectHomepage;
 
-// router.use((req, res, next) => {
-//   if (req.cookies.user_sid && !req.session.user) {
-//     res.clearCookie('user_sid')
-//   }
-//   next()
-// })
-
-// let sessionChecker = (req, res, next) => {
-//   if (req.session.user && req.cookies.user_sid) {
-//     res.redirect('pages/homepage')
-//   } else {
-//     next()
-//   }
-// }
-
-const redirectHomepage = (req, res, next) => {
-  if (!req.session.userID) {
-    res.redirect("/homepage");
-  } else {
-    next();
-  }
-};
-// TODO add redirectHomepage back
-router.get("/", (req, res) => {
+router.get("/", redirectHomepage, (req, res) => {
   const { userID } = req.session;
 
   res.render("pages/signup");

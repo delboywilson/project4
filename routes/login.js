@@ -2,24 +2,16 @@ const express = require("express");
 const router = express.Router();
 const db = require("../db/database");
 const bcrypt = require("bcrypt");
+const redirectHomepage = require("../middleware.js").redirectHomepage;
 
 // router.use((req, res, next) => {
 //   if (req.cookies.user_sid && !req.session.user) {
-//     res.clearCookie('user_sid')
+//     res.clearCookie("user_sid");
 //   }
-//   next()
-// })
+//   next();
+// });
 
-const redirectHomepage = (req, res, next) => {
-  if (!req.session.userID) {
-    res.redirect("/homepage");
-  } else {
-    next();
-  }
-};
-
-// TODO put redirectHomepage back in
-router.get("/", (req, res) => {
+router.get("/", redirectHomepage, (req, res) => {
   console.log(req.session);
 
   const { userID } = req.session;
