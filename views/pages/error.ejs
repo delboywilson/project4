@@ -1,18 +1,25 @@
 <header>
     <nav>
-        <img src="static/assets/logo_blanc.png" class="white-coffee" alt="Coffee_logo">
+        <a href="/homepage"><img src="static/assets/logo_blanc.png" class="white-coffee" alt="Coffee_logo"></a>
 
         <ul>
             <li><a style="color: white;" href="/schedulemanagement">Schedule</a></li>
-            <li><button type="submit" class="btn-logout btn-hover"><a  style="color: black;" href="/login">LOG OUT</a></button></li>
+            <form method='post' action='/logout'>
+            <li><button type="submit" class="btn-logout btn-hover"><a  style="color: black;" >LOG OUT</a></button></li>
+            </form>
         </ul>
     </nav>
 </header>
-
-<div class="whole-wrapper">
-    <h1>Sorry!</h1> 
+<div class="whole-wrapper1">
     <div class="main-wrapper">
-        <h2>something is up<span>&#9937;</span></h2>
-        <%=err.message%>
+        <h2>Something is up</h2>
+        <lottie-player  
+        loop
+        autoplay
+        mode="normal"
+        src="https://assets6.lottiefiles.com/private_files/lf30_fi8yfbmc.json"
+        style="width: 60%;"></lottie-player>
+        <p><%=err.message%></p>
     </div>
 </div>
+
