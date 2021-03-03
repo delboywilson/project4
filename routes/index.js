@@ -1,17 +1,9 @@
-const express = require('express')
-const router = express.Router()
-const crypto = require('crypto')
+const express = require("express");
+const router = express.Router();
+const redirectLogin = require("../middleware.js").redirectLogin;
 
-const redirectLogin = (req, res, next) => {
-  if (!req.session.userID) {
-    res.redirect('/login')
-  } else {
-    next()
-  }
-}
+router.get("/", redirectLogin, (req, res) => {
+  res.redirect("/homepage");
+});
 
-router.get('/', redirectLogin, (req, res) => {
-  res.redirect('/homepage')
-})
-
-module.exports = router
+module.exports = router;

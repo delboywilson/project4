@@ -28,7 +28,7 @@ footer {
 }
 
 .btn-hover:hover {
-  background-color: #7304FF;
+  background-color: #7304ff;
   border: 2px solid black;
   color: white;
   -webkit-transition: all 1s;
@@ -151,7 +151,7 @@ nav li {
   width: 120px;
   height: 50px;
   color: black !important;
-  border: 2px solid #7304FF;
+  border: 2px solid #7304ff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 37px;

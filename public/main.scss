@@ -1,41 +1,40 @@
 * {
-    margin: 0;
-    border: 0;
-    box-sizing: border-box;
-    font-family: "Archivo", sans-serif;
-    scroll-behavior: smooth;
-}
-  
-html body {
-    background-color: black;
-    height: 100%;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Archivo", sans-serif;
+  scroll-behavior: smooth;
 }
 
+html body {
+  background-color: black;
+  height: 100%;
+}
 
 h1 {
-    color: white;
-    text-align: center;
-    padding-bottom: 25px;
+  color: white;
+  text-align: center;
+  padding-bottom: 25px;
 }
 
 footer {
-    width: 100%;
-    font-weight: 400;
-    color: white;
-    text-align: center;
-    padding-top: 20px;
-    bottom: 0;
+  width: 100%;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  bottom: 0;
 }
 
-.btn-hover:hover { 
-    background-color:#7304FF;
-    border: 2px solid black;
-    color: white;
-    transition: all 1s;
+.btn-hover:hover {
+  background-color: #7304ff;
+  border: 2px solid black;
+  color: white;
+  transition: all 1s;
 }
 
 input {
-    outline: none;
+  outline: none;
 }
   
 .hidden-input {
@@ -46,149 +45,145 @@ input {
 
 //LAYOUT
 .whole-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 25%;
-    padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 25%;
+  padding-top: 40px;
 }
 
 .whole-wrapper1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 25%;
-    padding-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 25%;
+  padding-top: 10%;
 }
 
-.whole-wrapper2{
-    display: flex;
-    min-width: 30%;
-    padding-top: 10%;
-    flex-direction: column;
-    align-items: center;
+.whole-wrapper2 {
+  display: flex;
+  min-width: 30%;
+  padding-top: 10%;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    text-align: center;
-    padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  text-align: center;
+  padding: 25px;
 }
 
 //NAVIGATION BAR
 nav {
-    width: 100vw;
-    display: flex; 
-    justify-content: space-between;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
 }
 
 nav a {
-    text-decoration: none;
-    display: block;
-    font-size: 16px;
-    letter-spacing: 0.025em;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  letter-spacing: 0.025em;
 }
-  
-nav ul {
-    display: flex;
-    list-style-type: none; 
-    align-items: center;
-}
-  
-nav li {
-    display: flex;
-    align-items: center;
-    min-width: 150px;
-    justify-content: space-around;
 
+nav ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
 }
-  
+
+nav li {
+  display: flex;
+  align-items: center;
+  min-width: 150px;
+  justify-content: space-around;
+}
+
 .btn-logout {
-    width: 120px;
-    height: 50px;
-    color:black !important;
-    border: 2px solid #7304FF;
-    box-sizing: border-box;
-    border-radius: 37px;
-    outline: none;
-    margin-right: 50px;
+  width: 120px;
+  height: 50px;
+  color: black !important;
+  border: 2px solid #7304ff;
+  box-sizing: border-box;
+  border-radius: 37px;
+  outline: none;
+  margin-right: 50px;
 }
 
 .white-coffee {
-    width: 40px;
-    margin: 30px 50px; 
+  width: 40px;
+  margin: 30px 50px;
 }
-  
-  
+
 //LOGIN PAGE
-  
-.form-control{
-    align-items: center;
-    position: relative;
-    margin-bottom: 0.1px;
+
+.form-control {
+  align-items: center;
+  position: relative;
+  margin-bottom: 0.1px;
 }
-  
+
 .rectangle-one {
-    width: 300px;
-    height: 60px;
-    margin: 15px 0px;
-    border: 2px solid #7304ff;
-    box-sizing: border-box;
-    border-radius: 37px;
-    display: flex;
-    text-align: center;
+  width: 300px;
+  height: 60px;
+  margin: 15px 0px;
+  border: 2px solid #7304ff;
+  box-sizing: border-box;
+  border-radius: 37px;
+  display: flex;
+  text-align: center;
 }
-  
+
 .btn {
-    width: 100px;
-    height: 50px;
-    margin-bottom: 20px;
-    border: 2px solid #7304ff;
-    box-sizing: border-box;
-    border-radius: 37px;
-    outline: none;
+  width: 100px;
+  height: 50px;
+  margin-bottom: 20px;
+  border: 2px solid #7304ff;
+  box-sizing: border-box;
+  border-radius: 37px;
+  outline: none;
 }
-  
+
 .black-coffee {
-    width: 55px;
-    margin: 10px; 
+  width: 55px;
+  margin: 10px;
 }
-  
 
 //SIGNUP PAGE
 .rectangle-two {
-    width: 300px;
-    height: 45px;
-    margin: 15px 0;
-    border: 2px solid #7304ff;
-    box-sizing: border-box;
-    border-radius: 37px;
-    display: flex;
-    text-align: center;
+  width: 300px;
+  height: 45px;
+  margin: 15px 0;
+  border: 2px solid #7304ff;
+  box-sizing: border-box;
+  border-radius: 37px;
+  display: flex;
+  text-align: center;
 }
 
-.btn-signup { 
-    margin-top: 10px;
-    padding: 2px;
+.btn-signup {
+  margin-top: 10px;
+  padding: 2px;
 }
-
 
 //HOMEPAGE
 section {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    margin: 5% auto;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin: 5% auto;
 }
 .home-wrapper {
-    background-color: white;
-    margin: 10% auto;
-    border: 2px solid #7304ff;
-    text-align: center;
+  background-color: white;
+  margin: 10% auto;
+  border: 2px solid #7304ff;
+  text-align: center;
 }
 
 .round-image{
@@ -210,69 +205,66 @@ section {
 }
 
 .user-control {
-    display: flex; 
-    flex-direction: column;
-    margin: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
 }
 
 table {
-    border: 2px solid #7304ff;
-    width: 100%;
-    border-collapse: collapse;
+  border: 2px solid #7304ff;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 tr {
-    border: 1px solid black;
+  border: 1px solid black;
 }
-  
 
-//SIGN UP VALIDAION FORMAT 
+//SIGN UP VALIDAION FORMAT
 
 .form-control input {
-    display: block;
+  display: block;
 }
 
 .form-control input:focus {
-    outline: 0; 
-    border-color:rgb(106, 123, 139); 
+  outline: 0;
+  border-color: rgb(106, 123, 139);
 }
 
 .form-control.success input {
-	border-color: #2ecc71;
+  border-color: #2ecc71;
 }
 
 .form-control.error input {
-	border-color: #e74c3c;
+  border-color: #e74c3c;
 }
 
 .form-control i {
-	visibility: hidden;
-	position: absolute;
-    top: 15px;
-	right: 15px;
-
+  visibility: hidden;
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 
 .form-control.success i.fa-check-circle {
-	color: #2ecc71;
-	visibility: visible;
+  color: #2ecc71;
+  visibility: visible;
 }
 
 .form-control.error i.fa-exclamation-circle {
-	color: #e74c3c;
-	visibility: visible;
+  color: #e74c3c;
+  visibility: visible;
 }
 
 .form-control.error small {
-    visibility: visible;  
+  visibility: visible;
 }
 
 .form-control small {
-	color: #e74c3c;
-	position: absolute;
-	visibility: hidden;
-    left: 10px;
-    top: 47px;
-    font-size: 10px;
+  color: #e74c3c;
+  position: absolute;
+  visibility: hidden;
+  left: 10px;
+  top: 47px;
+  font-size: 10px;
 }
-
