@@ -3,22 +3,23 @@
         <a href="/"><img src="static/assets/logo_blanc.png" class="white-coffee" alt="Coffee_logo"></a>
 
         <ul>
-            <li><a style="color: white;" href="/schedulemanagement">Schedule</a></li>
+            <li><a style="color: white;" href="/scheduleManagement">Schedule</a></li>
             <form method='post' action='/logout'>
-            <li><button type="submit" class="btn-logout btn-hover"><a  style="color: black;" >LOG OUT</a></button></li>
+                <li><button type="submit" class="btn-logout btn-hover"><a style="color: black;">LOG OUT</a></button>
+                </li>
             </form>
         </ul>
     </nav>
 </header>
 
 <div class="whole-wrapper1">
-    <form method="POST" action="/schedulemanagement">
+    <form method="POST" action="/scheduleManagement">
         <div class="main-wrapper">
             <div>
                 <img src="/static/assets/logo_dark.png" class="black-coffee" alt="coffee blacklogo">
                 <h2>Craft avaliability</h2>
             </div>
-      
+
             <div>
                 <input name=id_user type="integer" id="id_user" class="rectangle-one" placeholder="Your Id">
                 <select style="outline: none;" class="rectangle-one" type="number" name="day" value=''>
@@ -30,11 +31,13 @@
                     <option type="number" value="5">Friday</option>
                     <option type="number" value="6">Saturday</option>
                     <option type="number" value="7">Sunday</option>
-            
-                <input name="start_time" type="datetime-local" id="InputStarttime" class="rectangle-one" placeholder="Write your start time" required>
-                <input name="end_time" type="datetime-local" id="InputEndtime" class="rectangle-one" placeholder="Write your end time" required>
-                
-                <button type="submit" class="btn btn-hover">Submit</button>
+
+                    <input name="start_time" type="datetime-local" id="InputStarttime" class="rectangle-one"
+                        placeholder="Write your start time" required>
+                    <input name="end_time" type="datetime-local" id="InputEndtime" class="rectangle-one"
+                        placeholder="Write your end time" required>
+
+                    <button type="submit" class="btn btn-hover">Submit</button>
             </div>
         </div>
     </form>
@@ -53,17 +56,22 @@
                 <th>Start 🕑</th>
                 <th>End 🕑</th>
             </tr>
-            
-            <% for(let i =0; i < schedule.length; i++ ){ %>
+
+            <% for(let i=0; i < schedule.length; i++ ){ %>
                 <tr>
                     <!-- <td><%= schedule[i].id_user %></td> -->
                     <!--<td><%= schedule[i].first_name %> <%= schedule[i].last_name %></td> -->
-                    <td><%= schedule[i].day %></td>
-                    <td><%= schedule[i].start_time %></td>
-                    <td><%= schedule[i].end_time %></td>
+                    <td>
+                        <%= schedule[i].day %>
+                    </td>
+                    <td>
+                        <%= schedule[i].start_time %>
+                    </td>
+                    <td>
+                        <%= schedule[i].end_time %>
+                    </td>
                 </tr>
-            <% } %>
+                <% } %>
         </table>
     </div>
 </section>
-

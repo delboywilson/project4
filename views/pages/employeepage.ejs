@@ -4,9 +4,10 @@
 
 
         <ul>
-            <li><a style="color: white;" href="/schedulemanagement">Schedule</a></li>
+            <li><a style="color: white;" href="/scheduleManagement">Schedule</a></li>
             <form method='post' action='/logout'>
-            <li><button type="submit" class="btn-logout btn-hover"><a  style="color: black;" >LOG OUT</a></button></li>
+                <li><button type="submit" class="btn-logout btn-hover"><a style="color: black;">LOG OUT</a></button>
+                </li>
             </form>
         </ul>
     </nav>
@@ -16,37 +17,48 @@
 <div class="whole-wrapper2">
     <h1 style="color:white; text-align:center; margin-bottom: 20px">Profile Details</h2>
 
-    <div class="main-wrapper">
-        <div  class="round-image"></div> 
-    
-        <p class="rectangle-two"><%= user[0].first_name %></p>
-        <p class="rectangle-two"><%= user[0].last_name %></p>
-        <p class="rectangle-two"><%= user[0].email %></p>
-        
-    </div>
+        <div class="main-wrapper">
+            <div class="round-image"></div>
+
+            <p class="rectangle-two">
+                <%= user[0].first_name %>
+            </p>
+            <p class="rectangle-two">
+                <%= user[0].last_name %>
+            </p>
+            <p class="rectangle-two">
+                <%= user[0].email %>
+            </p>
+
+        </div>
 </div>
 
 <section class="whole-wrapper2">
-        <h2 style="color:white; text-align:center;">Your personal schedule</h2>
-  
-        <div class="home-wrapper">
-            <table>
+    <h2 style="color:white; text-align:center;">Your personal schedule</h2>
+
+    <div class="home-wrapper">
+        <table>
+            <tr>
+                <th>Days </th>
+                <th>Start 🕑</th>
+                <th>End 🕑</th>
+            </tr>
+
+            <% for(let i=0; i < user.length; i++) { %>
                 <tr>
-                    <th>Days </th>
-                    <th>Start 🕑</th>
-                    <th>End 🕑</th>
+                    <td>
+                        <%= user[i].day %>
+                    </td>
+                    <td>
+                        <%= user[i].start_time %>
+                    </td>
+                    <td>
+                        <%= user[i].end_time %>
+                    </td> -->
                 </tr>
-                
-                <% for(let i =0; i < user.length; i++) { %>
-                    <tr>
-                        <td><%= user[i].day %></td>
-                        <td><%= user[i].start_time %></td>
-                        <td><%= user[i].end_time %></td> -->
-                    </tr>
-                <%}%> 
-                
-            </table>
-        </div>
+                <%}%>
+
+        </table>
+    </div>
     </div>
 </section>
-  

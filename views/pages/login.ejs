@@ -1,36 +1,56 @@
 <div class="whole-wrapper1">
-    <h1>Mr Coffee Schedule</h1>
+  <h1>Mr Coffee Schedule</h1>
 
-    <div >
-        <form method="POST" action="/login" id="login-form" novalidate>
-            <div class="main-wrapper">
-                <div>
-                    <img src="/static/assets/logo_dark.png" class="black-coffee" alt="coffee blacklogo">
-                    <h2>Login</h2>
-                </div>
+  <div>
+    <form method="POST" action="/login" id="login-form" novalidate>
+      <div class="main-wrapper">
+        <div>
+          <img
+            src="/static/assets/logo_dark.png"
+            class="black-coffee"
+            alt="coffee blacklogo"
+          />
+          <h2>Login</h2>
+        </div>
 
-                <div class="form-control">
-                    <input name="email" type="email" id="inputEmail" class="rectangle-one" placeholder="Email" onkeyPress="checkLoginInput()" required>
-                    <i class="fas fa-check-circle" style="top: 40px;"></i>
-                    <i class="fas fa-exclamation-circle" style="top: 40px;"></i>
-                    <small style="top: 80px;">Error Message</small>
-                </div>
-                
-                <div class="form-control">
-                    <input name="password" type="password" id="inputPassword" class="rectangle-one" placeholder="Password" onkeyPress="checkLoginInput()"required>
-                    <i class="fas fa-check-circle" style="top: 40px;"></i>
-                    <i class="fas fa-exclamation-circle" style="top: 40px;"></i>
-                    <small style="top: 80px;">Error Message</small>
-                </div>
+        <div class="form-control">
+          <input
+            name="email"
+            type="email"
+            id="inputEmail"
+            class="rectangle-one"
+            placeholder="Email"
+            onkeyPress="checkLoginInput()"
+            required
+          />
+          <i class="fas fa-check-circle" style="top: 40px"></i>
+          <i class="fas fa-exclamation-circle" style="top: 40px"></i>
+          <small style="top: 80px">Error Message</small>
+        </div>
 
-                <div>
-                    <button type="submit" class="btn btn-hover">Login</button>
-                    <p>don't have an account yet?</p>
-                    <a href="/signup">SIGN UP</a>
-                </div>
-            </div>
-        </form>
-    </div>
+        <div class="form-control">
+          <input
+            name="password"
+            type="password"
+            id="inputPassword"
+            class="rectangle-one"
+            placeholder="Password"
+            onkeyPress="checkLoginInput()"
+            required
+          />
+          <i class="fas fa-check-circle" style="top: 40px"></i>
+          <i class="fas fa-exclamation-circle" style="top: 40px"></i>
+          <small style="top: 80px">Error Message</small>
+        </div>
+
+        <div>
+          <button type="submit" class="btn btn-hover">Login</button>
+          <p>don't have an account yet?</p>
+          <a href="/signup">SIGN UP</a>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
-  <script src="static/script/sharing.js"></script>
+<script src="static/script/sharing.js"></script>
 <script src="static/script/loginForm.js"></script>
