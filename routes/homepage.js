@@ -12,7 +12,7 @@ const redirectLogin = (req, res, next) => {
 // TODO put redirectHomepage back in
 router.get('/', (req, res) => {
 
-  db.any('SELECT * from schedules;')
+  db.any(`SELECT user_id, last_name, first_name, id_user, day, start_time, end_time FROM users INNER JOIN schedules ON user_id = id_user`)
     .then((schedule) => {
       console.log(schedule)
       res.render('pages/homepage', {
@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
       })
     })
     .catch((err) => {
-      //console.error(err)
+      console.error(err)
       res.render('pages/error', {
         err: err,
         title: "Error | Mr. Coffee"
