@@ -5,8 +5,8 @@ To develop a client-server web app for Mr. Coffee's employees to organise their 
 ## Motivation 
 This is a student project that is a part of the 3 month web developemnt course organised by [Incode Academy](https://www.inco.org.au/incode)
 
-## Screenshots
-![Mr.Coffee Login Page](https://github.com/delboywilson/project4/blob/0b9636e39dd37bea4491bf57604283ce4b41b116/public/Assets/login-page.png)
+## Demo Screenshots
+![Demo](https://github.com/delboywilson/project4/blob/69a065051ed887c26f7db07c9fd6dee864d96efb/public/Assets/Scheduling%20made%20easy%20%E2%98%95_%20Mr.%20Coffee.gif)
 
 ## Frameworks used:
 
