@@ -7,7 +7,8 @@ This is a student project that is a part of the 3 month web developemnt course o
 
 ## Demo Screenshots
 ![Demo](https://github.com/delboywilson/project4/blob/69a065051ed887c26f7db07c9fd6dee864d96efb/public/Assets/Scheduling%20made%20easy%20%E2%98%95_%20Mr.%20Coffee.gif)
-![Screenshot](https://github.com/delboywilson/project4/blob/eb290c3bd39e0a64ef1ec7ead00b1fe7391fce4f/public/Assets/login-page.png width="200")
+<img src="https://github.com/delboywilson/project4/blob/eb290c3bd39e0a64ef1ec7ead00b1fe7391fce4f/public/Assets/login-page.png" alt="Screenshot" width="200">
+
 
 ## Frameworks used:
 
