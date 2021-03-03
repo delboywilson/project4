@@ -23,7 +23,9 @@ This is a student project that is a part of the 3 month web developemnt course o
 - [ ] Develop registration logic
 
 ## Contributors 
-[](https://github.com/AmeliaLim]](https://github.com/AmeliaLim.png)
+<a href="https://github.com/AmeliaLim">
+  <img src="https://github.com/AmeliaLim.png" alt="Amelia Lim" width="100"/>
+</a>
 ![](/images/https://avatars.githubusercontent.com/u/75227946?s=460&u=9a7bfa8b780e251cfc6dc337d9788f6d963b7f59&v=4)
 
 ## Licence 
