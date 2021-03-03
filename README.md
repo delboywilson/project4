@@ -24,8 +24,8 @@ This is a student project that is a part of the 3 month web developemnt course o
 
 ## Contributors 
 
-![Amelia](/images/https://avatars.githubusercontent.com/u/49810878?s=460&u=26c3ac8e34f58cd67617a51240205d954a60cb20&v=4)
-![Derek](/images/https://avatars.githubusercontent.com/u/75227946?s=460&u=9a7bfa8b780e251cfc6dc337d9788f6d963b7f59&v=4)
+![](/images/https://avatars.githubusercontent.com/u/49810878?s=460&u=26c3ac8e34f58cd67617a51240205d954a60cb20&v=4)
+![](/images/https://avatars.githubusercontent.com/u/75227946?s=460&u=9a7bfa8b780e251cfc6dc337d9788f6d963b7f59&v=4)
 
 ## Licence 
-![MIT](/images/https://img.shields.io/badge/cocoapods/l/:spec)
+![](/images/https://img.shields.io/badge/cocoapods/l/:spec)
