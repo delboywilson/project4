@@ -27,8 +27,8 @@ This is a student project that is a part of the 3 month web developemnt course o
   <img src="https://github.com/AmeliaLim.png" alt="Amelia Lim" width="100"/>
 </a>
 
-<a href="https://github.com/delboywilson/">
-  <img src="https://github.com/delboywilson/.png" alt="Derek Wilsonn" width="100"/>
+<a href="https://github.com/delboywilson">
+  <img src="https://github.com/delboywilson.png" alt="Derek Wilson" width="100"/>
 </a>
 
 ## Licence 
