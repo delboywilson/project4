@@ -26,7 +26,10 @@ This is a student project that is a part of the 3 month web developemnt course o
 <a href="https://github.com/AmeliaLim">
   <img src="https://github.com/AmeliaLim.png" alt="Amelia Lim" width="100"/>
 </a>
-![](/images/https://avatars.githubusercontent.com/u/75227946?s=460&u=9a7bfa8b780e251cfc6dc337d9788f6d963b7f59&v=4)
+
+<a href="https://github.com/delboywilson/">
+  <img src="https://github.com/delboywilson/.png" alt="Derek Wilsonn" width="100"/>
+</a>
 
 ## Licence 
 ![](/images/https://img.shields.io/badge/cocoapods/l/:spec)
