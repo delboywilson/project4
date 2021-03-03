@@ -1,21 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const db = require("../db/database");
+const redirectLogin = require("../middleware.js").redirectLogin;
 
-const redirectLogin = (req, res, next) => {
-  if (!req.session.userID) {
-    res.redirect("/login");
-  } else {
-    next();
-  }
-};
-
-// router.get('/schedulemanagement', (req, res) => {
-//   res.render('pages/schedulemanagement/:schedule_id')
-// })
-
-// TODO put redirectLogin back in
-router.get("/", (req, res) => {
+router.get("/", redirectLogin, (req, res) => {
   db.any(
     `SELECT user_id, last_name, first_name, id_user, day, start_time, end_time FROM users INNER JOIN schedules ON user_id = id_user WHERE user_id = ${req.session.userID};`
   )
