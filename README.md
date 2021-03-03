@@ -18,9 +18,9 @@ This is a student project that is a part of the 3 month web developemnt course o
 
 - [x] Build database
 - [x] Create login page
-- [ ] Develop home page and user page
-- [ ] Develop schedule management page
-- [ ] Develop registration logic
+- [x] Develop home page and user page
+- [x] Develop schedule management page
+- [x] Develop registration logic
 
 ## Contributors 
 <a href="https://github.com/AmeliaLim">
@@ -32,4 +32,4 @@ This is a student project that is a part of the 3 month web developemnt course o
 </a>
 
 ## Licence 
-![](/images/https://img.shields.io/badge/cocoapods/l/:spec)
+![](https://img.shields.io/badge/cocoapods/l/:spec)
