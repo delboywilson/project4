@@ -38,6 +38,11 @@ input {
     outline: none;
 }
   
+.hidden-input {
+	left: -999px;
+	position: absolute;
+}
+
 //LAYOUT
 .whole-wrapper {
     display: flex;

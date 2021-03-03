@@ -2,7 +2,6 @@
     <nav>
         <img src="static/assets/logo_blanc.png" class="white-coffee" alt="Coffee_logo">
 
-
         <ul>
             <li><a style="color: white;" href="/schedulemanagement">Schedule</a></li>
             <form method='post' action='/logout'>
@@ -17,7 +16,12 @@
     <h1 style="color:white; text-align:center; margin-bottom: 20px">Profile Details</h2>
 
     <div class="main-wrapper">
-        <div  class="round-image"></div> 
+        <div class="round-image">
+            <form id="profilePictureForm" action="#">
+                <input class="hidden-input" id="changePicture" type="file"/>
+                <label class="" for="changePicture" title="Change Picture"><i class="fas fa-pencil-alt"></i></label>
+            </form>
+        </div> 
     
         <p class="rectangle-two"><%= user[0].first_name %></p>
         <p class="rectangle-two"><%= user[0].last_name %></p>
