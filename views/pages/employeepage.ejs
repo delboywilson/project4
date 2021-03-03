@@ -1,15 +1,24 @@
 <header>
-    <nav>
-        <img src="static/assets/logo_blanc.png" class="white-coffee" alt="Coffee_logo">
+  <nav>
+    <a href="/homepage"
+      ><img
+        src="static/assets/logo_blanc.png"
+        class="white-coffee"
+        alt="Coffee_logo"
+    /></a>
 
-        <ul>
-            <li><a style="color: white;" href="/schedulemanagement">Schedule</a></li>
-            <form method='post' action='/logout'>
-            <li><button type="submit" class="btn-logout btn-hover"><a  style="color: black;" >LOG OUT</a></button></li>
-            </form>
-        </ul>
-    </nav>
+    <ul>
+      <li><a style="color: white" href="/schedulemanagement">Schedule</a></li>
 
+      <form method="post" action="/logout">
+        <li>
+          <button type="submit" class="btn-logout btn-hover">
+            <a style="color: black">LOG OUT</a>
+          </button>
+        </li>
+      </form>
+    </ul>
+  </nav>
 </header>
 
 <div class="whole-wrapper2">
@@ -19,7 +28,7 @@
         <div class="round-image">
             <form id="profilePictureForm" action="#">
                 <input class="hidden-input" id="changePicture" type="file"/>
-                <label class="" for="changePicture" title="Change Picture"><i class="fas fa-pencil-alt"></i></label>
+                <label class="edit" for="changePicture" title="Change Picture"><i class="fas fa-pencil-alt"></i></label>
             </form>
         </div> 
     
@@ -45,7 +54,7 @@
                     <tr>
                         <td><%= user[i].day %></td>
                         <td><%= user[i].start_time %></td>
-                        <td><%= user[i].end_time %></td> -->
+                        <td><%= user[i].end_time %></td>
                     </tr>
                 <%}%> 
                 
