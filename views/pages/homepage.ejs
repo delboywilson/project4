@@ -1,13 +1,15 @@
 <header>
   <nav>
-    <img
-      src="static/assets/logo_blanc.png"
-      class="white-coffee"
-      alt="Coffee_logo"
-    />
+    <a href="/homepage"
+      ><img
+        src="static/assets/logo_blanc.png"
+        class="white-coffee"
+        alt="Coffee_logo"
+    /></a>
 
     <ul>
-      <li><a style="color: white" href="/scheduleManagement">Schedule</a></li>
+      <li><a style="color: white" href="/schedulemanagement">Schedule</a></li>
+
       <form method="post" action="/logout">
         <li>
           <button type="submit" class="btn-logout btn-hover">
@@ -33,12 +35,12 @@
         <th>End 🕑</th>
       </tr>
 
-      <% for(let i=0; i < schedule.length; i++) { %>
+      <% for(let i = 0; i < schedule.length; i++) { %>
       <tr>
         <td>
-          <a href="/employeePage/<%= schedule[i].user_id %>">
-            <%= schedule[i].first_name %> <%= schedule[i].last_name %>
-          </a>
+          <a href="/employeepage/<%= schedule[i].user_id %>"
+            ><%= schedule[i].first_name %> <%= schedule[i].last_name %></a
+          >
         </td>
         <td><%= schedule[i].id_user %></td>
         <td><%= schedule[i].day %></td>

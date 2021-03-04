@@ -1,7 +1,11 @@
 <header>
-    <nav>
-        <img src="static/assets/logo_blanc.png" class="white-coffee" alt="Coffee_logo">
-
+  <nav>
+    <a href="/homepage"
+      ><img
+        src="static/assets/logo_blanc.png"
+        class="white-coffee"
+        alt="Coffee_logo"
+    /></a>
 
         <ul>
             <li><a style="color: white;" href="/scheduleManagement">Schedule</a></li>
@@ -17,20 +21,19 @@
 <div class="whole-wrapper2">
     <h1 style="color:white; text-align:center; margin-bottom: 20px">Profile Details</h2>
 
-        <div class="main-wrapper">
-            <div class="round-image"></div>
-
-            <p class="rectangle-two">
-                <%= user[0].first_name %>
-            </p>
-            <p class="rectangle-two">
-                <%= user[0].last_name %>
-            </p>
-            <p class="rectangle-two">
-                <%= user[0].email %>
-            </p>
-
-        </div>
+    <div class="main-wrapper">
+        <div class="round-image">
+            <form id="profilePictureForm" action="#">
+                <input class="hidden-input" id="changePicture" type="file"/>
+                <label class="edit" for="changePicture" title="Change Picture"><i class="fas fa-pencil-alt"></i></label>
+            </form>
+        </div> 
+    
+        <div class="rectangle-two"><p><%= user[0].first_name %></p></div>
+        <div class="rectangle-two"><p><%= user[0].last_name %></p></div>
+        <div class="rectangle-two"><p><%= user[0].email %></p></div>
+        
+    </div>
 </div>
 
 <section class="whole-wrapper2">
@@ -54,11 +57,11 @@
                     </td>
                     <td>
                         <%= user[i].end_time %>
-                    </td> -->
+                    </td> 
                 </tr>
-                <%}%>
-
-        </table>
-    </div>
+            <%}%> 
+                
+            </table>
+        </div>
     </div>
 </section>
