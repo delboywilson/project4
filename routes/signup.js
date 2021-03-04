@@ -14,20 +14,20 @@ router.get("/", redirectHomepage, (req, res) => {
 router.post("/", (req, res) => {
   const { userID } = req.session;
 
-  let v1 = req.body.last_name;
-  let v2 = req.body.first_name;
-  let v3 = req.body.email;
-  let v4 = bcrypt.hashSync(req.body.password, 10);
+  let last_name = req.body.last_name;
+  let first_name = req.body.first_name;
+  let email = req.body.email;
+  let password = bcrypt.hashSync(req.body.password, 10);
 
   // TODO need to add more validation here
   // TODO cookie is not being created for signup
 
-  db.none(
+  db.any(
     "INSERT INTO users(last_name, first_name, email, password) VALUES ($1, $2, $3, $4);",
-    [v1, v2, v3, v4]
+    [last_name, first_name, email, password]
   )
     .then(() => {
-      db.query("SELECT * FROM users WHERE email = $1;", [v3]).then(
+      db.query("SELECT * FROM users WHERE email = $1;", [email]).then(
         (results) => {
           const newID = results[0];
           console.log(newID.user_id);

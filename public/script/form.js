@@ -5,12 +5,10 @@ const email = document.getElementById("emailInput");
 const password = document.getElementById("passwordInput");
 const confirmPassword = document.getElementById("confirmPasswordInput");
 
-form.addEventListener('submit', e => {
-
+form.addEventListener("submit", (e) => {
   if (!checkInputs()) {
-    e.preventDefault()
+    e.preventDefault();
   }
-
 });
 
 function checkInputs() {
@@ -43,17 +41,19 @@ function checkInputs() {
   if (passwordValue === "") {
     setErrorFor(passwordInput, "Password cannot be blank");
   } else if (!isPassword(passwordValue)) {
-    setErrorFor(passwordInput, "At least six characters, lower and uppercase letter and numbers")
+    setErrorFor(
+      passwordInput,
+      "At least six characters, lower and uppercase letter and numbers"
+    );
   } else {
     setSuccessFor(passwordInput);
   }
 
-
   if (confirmPasswordValue === "") {
     setErrorFor(confirmPasswordInput, "Password cannot be blank");
   } else if (passwordValue != confirmPasswordValue) {
-    console.log("this is", passwordValue)
-    console.log("this is confirm", confirmPasswordValue)
+    console.log("this is", passwordValue);
+    console.log("this is confirm", confirmPasswordValue);
     setErrorFor(confirmPasswordInput, "Password does not match");
   } else {
     setSuccessFor(confirmPasswordInput, "Password is a match");
@@ -92,23 +92,19 @@ function checkInputs() {
 //     return true;
 // }
 
-
-
-
-// // TRIGGER 
+// // TRIGGER
 
 // function setErrorFor(input, message) {
 //     const formControl = input.parentElement; //form-control
 //     const errorMessage = formControl.querySelector("small");
 //     errorMessage.innerText = message;
-//     formControl.className = "form-control error";    
+//     formControl.className = "form-control error";
 // }
 
 // function setSuccessFor(input) {
 // 	const formControl = input.parentElement;
 // 	formControl.className = "form-control success";
 // }
-
 
 // //REG EXPRESSION//
 
@@ -133,4 +129,3 @@ function checkInputs() {
 //     // toggle the eye slash icon
 //     this.classList.toggle('fa-eye-slash');
 // });
-
