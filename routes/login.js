@@ -13,9 +13,6 @@ const redirectHomepage = require("../middleware.js").redirectHomepage;
 
 router.get("/", redirectHomepage, (req, res) => {
   console.log(req.session);
-
-  const { userID } = req.session;
-
   res.render("pages/login");
 });
 

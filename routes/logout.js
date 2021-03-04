@@ -3,8 +3,8 @@ const router = express.Router();
 const redirectLogin = require("../middleware.js").redirectLogin;
 
 router.post("/", redirectLogin, (req, res) => {
-  res.clearCookie("user_sid");
   req.session.destroy();
+  res.clearCookie("user_sid");
   res.redirect("/login");
 });
 
